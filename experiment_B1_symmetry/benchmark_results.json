@@ -1,0 +1,16 @@
+{
+  "test_1_standard_r2": 0.6482128663706643,
+  "test_1_status": "FAIL [FAIL]",
+  "test_2_pass_rate": 0.0,
+  "test_2_mean_std": 6.931907460651236,
+  "test_2_status": "FAIL [FAIL]",
+  "test_3_rotation_extrap_r2": -0.0667123451123286,
+  "test_3_status": "FAIL [FAIL]",
+  "test_4_config_extrap_r2": 0.347407927379466,
+  "test_4_status": "FAIL [FAIL]",
+  "test_5_noise_r2": 0.6509768861344128,
+  "test_5_status": "PARTIAL [WARN]",
+  "test_6_cage_status": "UNCLEAR [WARN]",
+  "test_6_interpretation": "Mixed representation with intermediate correlations for both types. Neither pure reconstruction nor pure emergence. May indicate transitional dimensionality (40D is borderline).",
+  "final_verdict": "FAIL - POOR PERFORMANCE [FAIL]"
+}
