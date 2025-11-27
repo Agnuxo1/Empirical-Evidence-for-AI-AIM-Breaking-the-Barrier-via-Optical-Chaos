@@ -1,0 +1,16 @@
+Breaking Darwin's Barrier: A Comprehensive Experimental Investigation of AI-Based Physics Discovery Beyond Human Conceptual Frameworks
+Francisco Angulo de Lafuente
+
+Independent Research
+
+Credits and References
+Darwin's Cage Theory:
+
+Theory Creator: Gideon Samid
+Reference: Samid, G. (2025). Negotiating Darwin's Barrier: Evolution Limits Our View of Reality, AI Breaks Through. Applied Physics Research, 17(2), 102. https://doi.org/10.5539/apr.v17n2p102
+Publication: Applied Physics Research; Vol. 17, No. 2; 2025. ISSN 1916-9639 E-ISSN 1916-9647. Published by Canadian Center of Science and Education
+Available at: https://www.researchgate.net/publication/396377476_Negotiating_Darwin's_Barrier_Evolution_Limits_Our_View_of_Reality_AI_Breaks_Through
+Experiments, AI Models, Architectures, and Reports:
+
+Author: Francisco Angulo de Lafuente
+Responsibilities: Experimental design, AI model creation, architecture development, results analysis, and report writing
