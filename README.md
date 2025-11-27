@@ -1,3 +1,5 @@
+<img width="1168" height="714" alt="Portada-crop" src="https://github.com/user-attachments/assets/60a473e5-b23d-4036-b0e8-f02ba72e5649" />
+
 # Breaking Darwin's Barrier: A Comprehensive Experimental Investigation of AI-Based Physics Discovery Beyond Human Conceptual Frameworks
 
 **Francisco Angulo de Lafuente**
