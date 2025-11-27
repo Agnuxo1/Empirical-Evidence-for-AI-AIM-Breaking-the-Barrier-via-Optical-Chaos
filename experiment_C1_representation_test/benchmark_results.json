@@ -1,0 +1,7 @@
+{
+  "information_equivalence": true,
+  "model_reproducibility": true,
+  "statistical_power": true,
+  "bootstrap_ci": true,
+  "control_variables": true
+}
