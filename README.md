@@ -237,6 +237,9 @@ All experiments use:
 
 **Interpretation**: The model successfully learned the physics but reconstructed the human variable $v_0$ internally. This demonstrates that the architecture can handle multiplicative relationships ($v_0^2$) but falls back to variable reconstruction in low-dimensional systems.
 
+<img width="1500" height="600" alt="experiment_1_results" src="https://github.com/user-attachments/assets/331c81ac-414c-4f40-92dd-8a5c945aa7ac" />
+
+
 ### 4.2 Experiment 2: Einstein's Train (Relativistic Time Dilation)
 
 **Objective**: Determine if the model can learn the Lorentz factor $\gamma = 1/\sqrt{1-v^2/c^2}$ from geometric photon paths without explicit $v^2$ knowledge.
@@ -251,6 +254,8 @@ All experiments use:
 - **Cage Status**: 🔓 **BROKEN**
 
 **Interpretation**: This is the first confirmed cage-breaking. The model learned relativistic physics through geometric interference patterns rather than reconstructing velocity. The strong extrapolation performance (R²=0.94) confirms genuine law discovery.
+<img width="1200" height="500" alt="stress_test_results" src="https://github.com/user-attachments/assets/37ca0a0d-34c6-4b06-b2e3-735a7d6e546e" />
+<img width="1400" height="600" alt="experiment_2_relativity" src="https://github.com/user-attachments/assets/dc46d665-e79d-4ea8-9fba-28eb1eda82d7" />
 
 ### 4.3 Experiment 3: The Absolute Frame (Phase Extraction)
 
@@ -265,6 +270,8 @@ All experiments use:
 - **Cage Status**: 🔓 **BROKEN*** (limited generalization)
 
 **Interpretation**: The model successfully extracted phase information invisible to standard measurements. However, performance degrades outside the training distribution, indicating partial rather than complete cage-breaking.
+<img width="1200" height="500" alt="experiment_3_absolute_frame" src="https://github.com/user-attachments/assets/2c77300f-5457-49b4-b2fc-ad9867db599a" />
+<img width="1000" height="500" alt="benchmark_3_results" src="https://github.com/user-attachments/assets/f1b83d4f-9145-4390-a404-855e8ff07fc9" />
 
 ### 4.4 Experiment 4: The Transfer Test
 
@@ -277,6 +284,8 @@ All experiments use:
 - **Cage Status**: ❌ **FAILED**
 
 **Interpretation**: Complete failure of transfer learning. Models cannot generalize across domains even when underlying mathematics is identical. This suggests domain-specific learning rather than universal principle discovery.
+<img width="2250" height="750" alt="experiment_4_transfer" src="https://github.com/user-attachments/assets/6e456f2a-99ec-4c57-8b06-16e49f100a59" />
+<img width="2250" height="1500" alt="experiment_4_rigorous" src="https://github.com/user-attachments/assets/b47a710f-807f-4b1c-9a24-537df5cd7190" />
 
 ### 4.5 Experiment 5: Conservation Laws Discovery
 
@@ -291,6 +300,8 @@ All experiments use:
 - **Cage Status**: 🔒 **LOCKED**
 
 **Interpretation**: The chaos model failed on division operations (required for inelastic collisions). It fell back to reconstructing momentum, demonstrating an architectural limitation.
+<img width="2250" height="1500" alt="experiment_5_conservation" src="https://github.com/user-attachments/assets/9dd3705e-a943-4c98-af0d-5e1a20991fd6" />
+<img width="1800" height="1200" alt="benchmark_5_results" src="https://github.com/user-attachments/assets/0a34e43a-daef-49cc-99f2-e1186fe36d66" />
 
 ### 4.6 Experiment 6: Quantum Interference (Double Slit)
 
@@ -304,6 +315,8 @@ All experiments use:
 - **Cage Status**: 🟡 **UNCLEAR** (both failed)
 
 **Interpretation**: Both models failed. The problem requires learning variable-frequency trigonometric functions, a known failure mode for the architecture.
+<img width="2400" height="1500" alt="experiment_6_quantum_interference" src="https://github.com/user-attachments/assets/0cf1eae6-b3c8-4a83-8c3e-0cc2aca9f4bd" />
+<img width="2250" height="1500" alt="benchmark_6_results" src="https://github.com/user-attachments/assets/955a9c0e-cc3c-498a-91c1-818b1a6dc68f" />
 
 ### 4.7 Experiment 7: Emergent Order (Phase Transitions)
 
@@ -318,6 +331,8 @@ All experiments use:
 - **Cage Status**: 🔒 **LOCKED**
 
 **Interpretation**: The chaos model struggles with high-dimensional linear relationships. The baseline polynomial regression succeeds because the target is essentially a linear sum.
+<img width="2400" height="1500" alt="experiment_7_phase_transitions" src="https://github.com/user-attachments/assets/c8433416-9dc2-410c-bad0-e92cf3c27e0b" />
+<img width="2250" height="1500" alt="benchmark_7_results" src="https://github.com/user-attachments/assets/7ea45faf-151a-4b62-ba61-a64c8a91a32e" />
 
 ### 4.8 Experiment 8: Classical vs Quantum Mechanics
 
@@ -328,6 +343,7 @@ All experiments use:
 - Quantum: R² = -0.03, **LOCKED**
 
 **Interpretation**: Both systems failed due to variable-frequency requirements. Complexity alone (quantum vs. classical) does not break the cage.
+<img width="2084" height="1482" alt="experiment_8_classical_vs_quantum" src="https://github.com/user-attachments/assets/98b32fe0-168e-4081-adf4-15cee81f1a32" />
 
 ### 4.9 Experiment 9: Linear vs Nonlinear (Chaos)
 
@@ -338,6 +354,7 @@ All experiments use:
 - Chaotic: R² = 0.06, **LOCKED**
 
 **Interpretation**: Both systems locked. Chaos alone does not break the cage when models fail to learn the dynamics.
+<img width="2084" height="1482" alt="experiment_9_linear_vs_chaos" src="https://github.com/user-attachments/assets/a496ba20-7e5e-45f4-9ad4-0ecafe4cdd10" />
 
 ### 4.10 Experiment 10: Low vs High Dimensionality
 
@@ -351,6 +368,7 @@ All experiments use:
 - N-Body: R² = -0.16, max_corr = 0.13, **🔓 BROKEN**
 
 **Interpretation**: Dimensionality matters! The high-dimensional system shows broken cage status even with poor performance, indicating distributed representation rather than variable reconstruction.
+<img width="2084" height="1480" alt="experiment_10_low_vs_high_dim" src="https://github.com/user-attachments/assets/37ba62d7-2b8c-4839-bfe7-433b92f1d195" />
 
 ---
 
@@ -365,6 +383,7 @@ All experiments use:
 **Result**: Both models failed due to architectural mismatch (static reservoir for temporal task).
 
 **Lesson**: Proper architecture is essential for valid cage analysis.
+<img width="1200" height="600" alt="experiment_A1_results" src="https://github.com/user-attachments/assets/913e6230-98a0-44d0-a712-6290b0cbb111" />
 
 ### 5.2 Experiment A2: The Definitive Coordinate Independence Test
 
@@ -384,6 +403,7 @@ All experiments use:
 - **LSTM**: Learns geometric invariants in latent space (physics-aware)
 
 This demonstrates that multiple valid pathways to physical truth exist, supporting a nuanced view of the cage hypothesis.
+<img width="2100" height="1500" alt="experiment_A2_results" src="https://github.com/user-attachments/assets/d009f80f-51c9-4b39-96f5-1e6c3723ab43" />
 
 ---
 
@@ -405,6 +425,7 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 - **Cage Status**: 🔓 **BROKEN** (Methodological)
 
 **Interpretation**: The AI "sensed" spacetime curvature through the metric tensor and used computational optimization rather than analytical mathematics. This represents a methodological transcendence of human physics approaches.
+<img width="2384" height="1449" alt="experiment_B1_main_results" src="https://github.com/user-attachments/assets/0becb6de-7e29-4f8a-860e-dc1bc32ec9e0" />
 
 ### 6.2 Experiment B2: The Genesis (Dimensional Break)
 
@@ -437,6 +458,7 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 - **Cage Status**: 🔓 **BROKEN** (Informational)
 
 **Interpretation**: The AI discovered non-local correlations that violate classical local realism, demonstrating informational transcendence of human physics frameworks.
+<img width="1000" height="600" alt="bell_correlation_plot" src="https://github.com/user-attachments/assets/36ef06c6-368c-475e-9d03-2b399443f3d2" />
 
 ---
 
@@ -457,6 +479,7 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 - **Cage Status**: 🔒 **LOCKED** (both)
 
 **Key Finding**: Representation type affects correlation patterns (statistically significant, large effect sizes) but both remain locked. The non-anthropomorphic representation shows **higher** correlation with velocity (opposite to prediction) but **lower** correlation with angle (as predicted). This reveals complex, non-uniform effects of representation on internal feature correlations.
+<img width="2384" height="1777" alt="experiment_C1_results" src="https://github.com/user-attachments/assets/c0fbee56-2c0e-4957-86a6-99c96642956f" />
 
 ### 7.2 Experiment D1: Complexity Phase Transition
 
@@ -482,6 +505,12 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 | 5 | N-Body (N=7) | 44 | -7.8×10¹⁶ | NaN* | 🔒 LOCKED |
 
 **Critical Finding**: **ALL levels remained LOCKED**, falsifying the complexity threshold hypothesis. Complexity alone (dimensionality + chaos) is insufficient to break the cage.
+<img width="2250" height="600" alt="level_5_7Body" src="https://github.com/user-attachments/assets/48af8632-aa91-4c95-bcc0-328d7eaa01bb" />
+<img width="2250" height="600" alt="level_4_Unrestricted_3Body" src="https://github.com/user-attachments/assets/26b5e7a5-95fc-4c21-8d6c-9421b06ab41b" />
+<img width="2250" height="600" alt="level_3_Restricted_3Body" src="https://github.com/user-attachments/assets/2d644bea-efe0-450a-a1af-101dc7a7d3ef" />
+<img width="2250" height="600" alt="level_2_Kepler_2Body" src="https://github.com/user-attachments/assets/4e36dbdc-4a6a-4564-bb13-6be1feabb8b8" />
+<img width="2250" height="600" alt="level_1_Harmonic_Oscillator" src="https://github.com/user-attachments/assets/a6f0c99e-c149-4d37-897c-4695914d3ae0" />
+<img width="1500" height="900" alt="D1_phase_transition_curve" src="https://github.com/user-attachments/assets/1de2cdc0-d0d2-4444-90d7-782a85e55162" />
 
 ### 7.3 Experiment D2: Geometric Forcing
 
@@ -501,6 +530,9 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 | 3. Topological | 0.79 | 0.90 | 🔒 LOCKED | BROKEN |
 
 **Critical Finding**: **0/3 problems achieved BROKEN status**. Geometric encoding alone is insufficient. The successful cage-breaking cases (Exp 2, 3, 10) must share a different critical property.
+<img width="2250" height="600" alt="problem_3_Topological_Invariant" src="https://github.com/user-attachments/assets/1a4915e7-8424-4e9a-ae39-862ff0b43170" />
+<img width="2250" height="600" alt="problem_2_Trajectory_Energy_Manifold" src="https://github.com/user-attachments/assets/bcb76eb0-0865-41a2-8d80-5ddc05e0dbe5" />
+<img width="2250" height="600" alt="problem_1_Spherical_Wave_Field" src="https://github.com/user-attachments/assets/077ca20a-3baa-4dc3-b4c9-7c20289a58dc" />
 
 ### 7.4 Experiment W1: Quantum Cage
 
@@ -519,6 +551,7 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 - **Cage Status**: 🔓 **BROKEN**
 
 **Interpretation**: The model developed representations with near-zero correlation to classical position and momentum, while successfully learning quantum dynamics. This demonstrates genuine quantum representation discovery beyond classical physics concepts.
+<img width="1200" height="1000" alt="cage_analysis" src="https://github.com/user-attachments/assets/e2d1effe-6709-4658-8cc4-c51fc411fd68" />
 
 ---
 
