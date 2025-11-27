@@ -1,0 +1,40 @@
+[
+  {
+    "problem": 1,
+    "name": "Spherical Wave Field",
+    "score": 0.9997202446171797,
+    "metric": "R2",
+    "cage_status": "LOCKED",
+    "max_correlation": 0.71821583613249,
+    "correlations": {
+      "k": 0.5520824335010716,
+      "A": 0.71821583613249,
+      "r_center": 0.0
+    }
+  },
+  {
+    "problem": 2,
+    "name": "Trajectory Energy Manifold",
+    "score": 0.9962166930613635,
+    "metric": "R2",
+    "cage_status": "TRANSITION",
+    "max_correlation": 0.6797084123954296,
+    "correlations": {
+      "theta0": 0.6129566444065228,
+      "omega0": 0.6797084123954296,
+      "energy": 0.5917131572523207
+    }
+  },
+  {
+    "problem": 3,
+    "name": "Topological Invariant",
+    "score": 0.79,
+    "metric": "Accuracy",
+    "cage_status": "LOCKED",
+    "max_correlation": 0.8968182065229193,
+    "correlations": {
+      "winding": 0.8968182065229193,
+      "n_vortices": 0.3791220038941604
+    }
+  }
+]
