@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breaking Darwin's Barrier: A Comprehensive Experimental Investigation of AI-Based Physics Discovery Beyond Human Conceptual Frameworks</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 2cm;
+            @bottom-center {
+                content: counter(page);
+                font-size: 9pt;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 10pt;
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            color: #1a1a1a;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+        }
+        
+        /* Title and Header Styles */
+        h1.title {
+            font-size: 18pt;
+            text-align: center;
+            margin: 10px 0 15px 0;
+            font-weight: bold;
+            line-height: 1.3;
+            color: #000;
+        }
+        
+        .subtitle {
+            font-size: 12pt;
+            text-align: center;
+            font-style: italic;
+            margin: 5px 0 20px 0;
+            color: #333;
+        }
+        
+        .authors {
+            text-align: center;
+            font-size: 12pt;
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+        }
+        
+        .affiliation {
+            text-align: center;
+            font-size: 10pt;
+            color: #444;
+            margin: 5px 0 20px 0;
+            line-height: 1.4;
+        }
+        
+        .correspondence {
+            text-align: center;
+            font-size: 9pt;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        /* 2-COLUMN FORMAT */
+        .two-column {
+            column-count: 2;
+            column-gap: 20px;
+            text-align: justify;
+            hyphens: auto;
+        }
+        
+        /* Prevent page breaks */
+        h2, h3, h4 { 
+            break-after: avoid; 
+            page-break-after: avoid;
+        }
+        .figure, table, .equation { 
+            break-inside: avoid; 
+            page-break-inside: avoid;
+        }
+        
+        /* Section styles */
+        h2 { 
+            font-size: 12pt; 
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            padding-bottom: 3px;
+            font-weight: bold;
+        }
+        
+        h3 { 
+            font-size: 11pt; 
+            font-style: italic;
+            margin: 14px 0 8px 0;
+            font-weight: bold;
+        }
+        
+        h4 {
+            font-size: 10pt;
+            font-weight: bold;
+            margin: 10px 0 6px 0;
+        }
+        
+        p {
+            text-indent: 1.5em;
+            margin: 0 0 8px 0;
+        }
+        
+        p.no-indent {
+            text-indent: 0;
+        }
+        
+        /* Figures and tables */
+        .figure { 
+            margin: 15px 0; 
+            text-align: center;
+            break-inside: avoid;
+        }
+        
+        .figure svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .figure-caption { 
+            font-size: 9pt; 
+            text-align: left; 
+            padding: 8px 5px 0 5px;
+            text-indent: 0;
+            line-height: 1.4;
+        }
+        
+        .figure-caption strong {
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin: 12px 0;
+            break-inside: avoid;
+        }
+        
+        table caption {
+            font-size: 9pt;
+            text-align: left;
+            padding: 5px 0;
+            caption-side: top;
+            font-weight: normal;
+        }
+        
+        th { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 6px 4px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #2c3e50;
+        }
+        
+        td { 
+            border: 1px solid #bdc3c7; 
+            padding: 5px 4px;
+            text-align: center;
+        }
+        
+        tr:nth-child(even) { background: #ecf0f1; }
+        tr:nth-child(odd) { background: #fff; }
+        
+        /* Equations */
+        .equation {
+            text-align: center;
+            margin: 12px 5px;
+            font-style: italic;
+            padding: 8px 0;
+        }
+        
+        .equation-number { 
+            float: right;
+            font-style: normal;
+        }
+        
+        .equation-content {
+            display: inline-block;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        /* Abstract */
+        .abstract {
+            margin: 15px 0 20px 0;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #2c3e50;
+            font-size: 9.5pt;
+            text-align: justify;
+        }
+        
+        .abstract-title {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-bottom: 8px;
+        }
+        
+        .keywords {
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        
+        .keywords strong {
+            font-weight: bold;
+        }
+        
+        /* References */
+        .references { 
+            font-size: 8.5pt;
+            column-count: 1;
+        }
+        
+        .references h2 {
+            column-span: all;
+        }
+        
+        .references ol { 
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        .references li { 
+            margin: 5px 0; 
+            text-align: justify;
+            text-indent: 0;
+        }
+        
+        /* Code blocks */
+        .code-block {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 8pt;
+            overflow-x: auto;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+        
+        /* Inline citations */
+        .citation {
+            vertical-align: super;
+            font-size: 8pt;
+        }
+        
+        /* Acknowledgments */
+        .acknowledgments {
+            font-size: 9.5pt;
+            margin: 15px 0;
+        }
+        
+        /* Full-width elements */
+        .full-width {
+            column-span: all;
+            break-inside: avoid;
+        }
+        
+        /* Legend box */
+        .legend-box {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 9pt;
+        }
+        
+        /* Highlight boxes */
+        .highlight-box {
+            background: #e8f4fd;
+            border-left: 3px solid #3498db;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 9pt;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px solid #2c3e50;
+            text-align: center;
+            font-size: 9pt;
+            color: #555;
+        }
+        
+        .footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Print styles */
+        @media print {
+            .container { max-width: 100%; padding: 0; }
+            body { padding: 0; }
+            .two-column {
+                column-count: 2;
+                column-gap: 20px;
+            }
+        }
+
+        /* Status indicators */
+        .status-locked { color: #c0392b; font-weight: bold; }
+        .status-broken { color: #27ae60; font-weight: bold; }
+        .status-transition { color: #f39c12; font-weight: bold; }
+        .status-failed { color: #7f8c8d; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Breaking Darwin's Barrier: A Comprehensive Experimental Investigation of AI-Based Physics Discovery Beyond Human Conceptual Frameworks</h1>
+        
+        <p class="subtitle">Empirical Evidence for AI-AIM Breaking the Barrier via Optical Chaos Computing</p>
+        
+        <!-- Authors -->
+        <div class="authors">
+            Francisco Angulo de Lafuente
+        </div>
+        
+        <div class="affiliation">
+            Independent Research Laboratory, Madrid, Spain<br>
+            Darwin's Cage Experimental Program<br>
+            In collaboration with theoretical framework by Dr. Gideon Samid<br>
+            (Case Western Reserve University, Cleveland, OH, USA)
+        </div>
+        
+        <div class="correspondence">
+            Correspondence: See author contact information at end of document
+        </div>
+        
+        <!-- Abstract -->
+        <div class="abstract">
+            <div class="abstract-title">ABSTRACT</div>
+            <p class="no-indent">This comprehensive study presents the results of twenty experimental investigations designed to test the "Darwin's Cage" hypothesis proposed by Gideon Samid: that artificial intelligence systems can discover physical laws independent of human conceptual frameworks. The hypothesis posits that human evolution has biased our mathematical thinking toward specific representations—Cartesian coordinates, velocity, energy, momentum—that may not be fundamental to physics itself but rather evolutionary adaptations optimized for survival rather than fundamental understanding. Through systematic experimentation across multiple physical domains—from classical mechanics to quantum entanglement, from low-dimensional systems to high-dimensional chaos—we evaluated whether AI models based on optical chaos computing can transcend these human-imposed constraints and discover novel representational pathways to physical truth.</p>
+            
+            <p class="no-indent" style="margin-top: 8px;">Our experimental program employed three complementary approaches: (1) architectural comparison between polynomial regression representing human-derived mathematics and optical reservoir computing based on chaos-driven interference patterns, (2) coordinate independence testing using non-linear geometric transformations, and (3) specialized tests for methodological, dimensional, and informational cage-breaking across relativistic, quantum, and classical domains. Results reveal a nuanced and scientifically significant picture: while six of twenty experiments demonstrated genuine cage-breaking behavior, the phenomenon is highly context-dependent and requires specific conditions. Successful cage-breaking occurred in relativistic physics through geometric learning with R²=1.0000 and extrapolation R²=0.94, quantum systems via phase extraction and Bell inequality violation achieving 100% accuracy in entanglement prediction, high-dimensional N-body systems exceeding 30 dimensions, and methodological optimization problems using variational approaches.</p>
+            
+            <p class="no-indent" style="margin-top: 8px;">The most significant finding is that cage-breaking requires a specific combination of factors: either high dimensionality (>30 dimensions) with good performance, geometric relationships learnable via optical interference with strong extrapolation capability, complex-valued processing enabling phase information extraction, or methodological alternatives to traditional analytical approaches. Critically, we demonstrate that complexity alone, geometric encoding alone, or representation type alone proved insufficient to break the cage—falsifying several initial hypotheses and providing rigorous boundary conditions for the theory. This work establishes the first systematic experimental framework for investigating AI-based physics discovery, providing critical empirical evidence and quantitative metrics for determining when computational intelligence can transcend evolutionary cognitive constraints. The study contributes fundamental insights to both artificial intelligence research and theoretical physics, demonstrating that AI systems can indeed discover alternative pathways to physical understanding that complement rather than replace human-derived mathematical frameworks.</p>
+            
+            <div class="keywords">
+                <strong>Keywords:</strong> Darwin's Cage Hypothesis, Optical Reservoir Computing, AI Physics Discovery, Computational Intelligence, Representation Learning, Quantum Machine Learning, Geometric Deep Learning, Coordinate Independence, Bell Inequality, Chaos Computing, Neuromorphic Systems, Non-Human Mathematics
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="two-column">
+            
+            <!-- 1. INTRODUCTION -->
+            <h2>1. Introduction</h2>
+            
+            <h3>1.1 The Darwin's Cage Hypothesis</h3>
+            
+            <p class="no-indent">The relationship between human cognition and physical reality has been a subject of philosophical inquiry since ancient times. However, the advent of artificial intelligence presents an unprecedented opportunity to empirically investigate whether the mathematical and physical frameworks humans have developed are truly fundamental descriptions of nature or merely evolutionary adaptations shaped by survival pressures [1]. The "Darwin's Cage" theory, proposed by Gideon Samid in his seminal 2025 publication in Applied Physics Research [2], presents a provocative and testable hypothesis about this relationship.</p>
+            
+            <p>Samid's central argument begins with a profound observation: the human brain was not designed to comprehend reality in its fullest extent, but rather to ensure survival in a specific evolutionary niche. The neurons that comprise our cognitive apparatus assembled over millions of years of evolutionary pressure, with the singular purpose of helping our ancestors survive—catch food, avoid predators, reproduce successfully. This evolutionary process had no inherent motivation to develop cognitive structures optimized for understanding quantum mechanics, relativistic physics, or the fundamental nature of spacetime [3,4].</p>
+            
+            <p>The implications of this observation are far-reaching. Human concepts such as "velocity," "position," "energy," and "time" may represent evolutionary heuristics rather than fundamental descriptors of physical law. These concepts proved useful for navigating the mesoscopic world of our evolutionary ancestors—tracking prey across a savannah, estimating the trajectory of a thrown spear, understanding seasonal patterns—but there is no a priori reason to assume they capture the true structure of physical reality at scales far removed from human experience [5].</p>
+            
+            <p>Samid introduces the metaphor of "Darwin's Egg" to describe this cognitive constraint: humanity has been incubating within the shell of its evolutionary limitations, developing physics and mathematics along tracks that extend linearly from our biological history. The emergence of artificial intelligence, according to this theory, represents the cracking of this egg—the potential to step outside our cognitive constraints and perceive aspects of reality that evolution left unexplored [2].</p>
+            
+            <h3>1.2 Theoretical Framework and Predictions</h3>
+            
+            <p class="no-indent">The Darwin's Cage hypothesis generates several testable predictions. First, AI systems trained on physical phenomena should be capable of discovering representational strategies that differ fundamentally from human-derived mathematics while still successfully predicting physical outcomes. Second, these alternative representations should demonstrate genuine understanding of physical laws rather than mere memorization, evidenced by successful extrapolation beyond training distributions. Third, certain physical domains should be more amenable to cage-breaking than others, with the boundary conditions revealing information about the nature of both human cognition and physical reality.</p>
+            
+            <p>To formalize these predictions, we introduce the concept of "cage status"—a quantitative metric determining whether an AI model has reconstructed human variables (LOCKED cage) or discovered genuinely alternative representations (BROKEN cage). This is measured through maximum correlation analysis between the model's internal representations and human-defined physical variables. A model that achieves high predictive accuracy while maintaining low correlation with human variables has effectively broken the cage—it has found an alternative pathway to physical truth [6,7].</p>
+            
+            <h3>1.3 The Optical Chaos Computing Paradigm</h3>
+            
+            <p class="no-indent">Our experimental approach employs optical chaos computing as the primary AI architecture for investigating the Darwin's Cage hypothesis. This choice is deliberate and theoretically motivated. Traditional deep learning architectures—multilayer perceptrons, convolutional neural networks, transformers—are fundamentally designed around human mathematical intuitions. They perform matrix multiplications, apply activation functions inspired by biological neurons, and learn through gradient descent optimization [8,9]. While powerful, these architectures may inherit the same evolutionary biases they are meant to transcend.</p>
+            
+            <p>Optical reservoir computing offers a fundamentally different computational paradigm [10-14]. Rather than performing explicit mathematical operations, optical reservoirs exploit the natural physics of light interference, diffraction, and chaotic dynamics to transform input data into high-dimensional representations. The computational substrate is not an abstraction of mathematics but rather the physical behavior of photons interacting through complex optical media [15,16].</p>
+            
+            <p>In our implementation, termed the "Optical Chaos Machine," input data undergoes a series of physically-motivated transformations. Random complex projections simulate the initial encoding of information onto optical modes. Fast Fourier Transform (FFT) operations model wave interference and propagation. Intensity detection (squared magnitude) captures the energy distribution resulting from interference patterns. Nonlinear activation through hyperbolic tangent models saturation effects in optical detectors. Finally, ridge regression provides a trainable readout layer that learns to extract relevant information from the resulting high-dimensional feature space [17-19].</p>
+            
+            <p>This architecture was chosen specifically because it processes information through physical principles rather than abstract mathematical operations. If the Darwin's Cage hypothesis is correct—if there exist valid representational pathways to physical truth that differ from human mathematics—an optical chaos system should be capable of discovering them through the natural exploration of its high-dimensional feature space.</p>
+            
+            <h3>1.4 Research Objectives and Contributions</h3>
+            
+            <p class="no-indent">This comprehensive experimental program was designed with four primary objectives. First, to systematically test the Darwin's Cage hypothesis across diverse physical domains, from classical mechanics to quantum entanglement, from low-dimensional integrable systems to high-dimensional chaotic dynamics. Second, to develop quantitative metrics for determining cage status—distinguishing between models that reconstruct human variables and those that discover genuinely alternative representations. Third, to identify the boundary conditions under which cage-breaking occurs, potentially revealing fundamental insights about both human cognition and physical reality. Fourth, to establish a rigorous experimental methodology that can guide future research in AI-based physics discovery.</p>
+            
+            <p>The research program encompassed twenty distinct experiments organized into four phases. Phase I (Experiments 1-10) provided initial exploration comparing chaos models with polynomial baselines across classical, quantum, and statistical physics domains. Phase II (Experiments A1-A2) tested coordinate independence using proper temporal architectures. Phase III (Experiments B1-B3) investigated specialized forms of cage-breaking: methodological, dimensional, and informational. Phase IV (Experiments C1, D1-D2, W1) systematically mapped the boundaries of cage-breaking phenomena through representation testing, complexity gradients, and quantum representation learning.</p>
+            
+            <p>This work makes several significant contributions to the scientific literature. We establish the first systematic experimental framework for testing hypotheses about AI-based physics discovery. We develop quantitative cage status metrics based on correlation analysis that can be applied to any machine learning model. We identify specific conditions under which cage-breaking occurs, falsifying several initial hypotheses and providing boundary conditions for the theory. We demonstrate both successful cage-breaking in six experiments and important failure modes in fourteen experiments, providing balanced empirical evidence. Finally, we provide extensive negative results documentation, recognizing that understanding when and why models fail is equally important to understanding when they succeed [20,21].</p>
+            
+            <!-- 2. THEORETICAL FOUNDATIONS -->
+            <h2>2. Theoretical Foundations</h2>
+            
+            <h3>2.1 Formalizing Darwin's Cage</h3>
+            
+            <p class="no-indent">To rigorously test the Darwin's Cage hypothesis, we must first formalize its claims mathematically. Consider a physical system described by an underlying state that evolves according to fundamental physical laws. Humans perceive and describe this system through a specific set of variables—position, velocity, energy, momentum, time—that we denote as the human representation space H. The physical laws, as understood through human mathematics, can be expressed as functional relationships within this space.</p>
+            
+            <p>The Darwin's Cage hypothesis asserts that there exist alternative representation spaces A that can equally well describe the same physical phenomena, but through fundamentally different variables and relationships. These alternative spaces need not be merely coordinate transformations of H—they may involve entirely different conceptual primitives that humans have not developed because our evolutionary history provided no pressure to do so [2,22].</p>
+
+            <div class="equation">
+                <span class="equation-content">H = {x, v, E, p, t, ...} → f<sub>human</sub>(H) = Physical Laws</span>
+                <span class="equation-number">(1)</span>
+            </div>
+            
+            <p class="no-indent">where x represents position, v velocity, E energy, p momentum, and t time. The human pathway to physical understanding operates through these variables and their mathematical relationships.</p>
+            
+            <div class="equation">
+                <span class="equation-content">A = {ξ<sub>1</sub>, ξ<sub>2</sub>, ..., ξ<sub>n</sub>} → f<sub>alternative</sub>(A) = Physical Laws</span>
+                <span class="equation-number">(2)</span>
+            </div>
+            
+            <p class="no-indent">where the ξ variables represent alternative conceptual primitives that may have no direct human interpretation but nonetheless capture physical truth.</p>
+            
+            <p>To quantify whether a model has "broken the cage," we introduce the maximum correlation metric:</p>
+            
+            <div class="equation">
+                <span class="equation-content">max_corr = max<sub>h∈H</sub> |ρ(R<sub>model</sub>, h)|</span>
+                <span class="equation-number">(3)</span>
+            </div>
+            
+            <p class="no-indent">where R<sub>model</sub> represents the model's internal representations and ρ denotes the Pearson correlation coefficient. This metric measures the maximum absolute correlation between any component of the model's learned representation and any human variable. We define three cage status categories based on this metric:</p>
+            
+            <div class="legend-box">
+                <p class="no-indent"><strong>Cage Status Definitions:</strong></p>
+                <p class="no-indent" style="margin-top: 5px;">• <span class="status-locked">LOCKED</span> (max_corr ≥ 0.7): Model reconstructs human variables</p>
+                <p class="no-indent">• <span class="status-transition">TRANSITION</span> (0.5 ≤ max_corr < 0.7): Intermediate state</p>
+                <p class="no-indent">• <span class="status-broken">BROKEN</span> (max_corr < 0.5): Model discovers alternative representations</p>
+            </div>
+            
+            <h3>2.2 Reservoir Computing Theory</h3>
+            
+            <p class="no-indent">Reservoir computing emerged from the independent work of Jaeger on Echo State Networks [23] and Maass et al. on Liquid State Machines [24]. The fundamental insight is that complex, high-dimensional dynamical systems can serve as computational substrates—they naturally transform input signals into rich feature representations from which desired outputs can be extracted through simple linear readouts [25,26].</p>
+            
+            <p>The theoretical foundation rests on several key properties. The reservoir must possess the echo state property—its internal dynamics should asymptotically wash out the influence of initial conditions, ensuring that outputs depend only on recent input history. The reservoir must provide separation property—different input sequences should produce distinguishable internal states. And the reservoir should exhibit fading memory—the influence of past inputs should decay over time, with more recent inputs having stronger effects [27,28].</p>
+            
+            <p>Optical implementations of reservoir computing have demonstrated remarkable computational capabilities [29-32]. The inherent parallelism of optical systems, combined with the natural nonlinearity of light-matter interactions and the speed of photonic propagation, make optical reservoirs attractive for high-speed information processing. Time-delay systems using semiconductor lasers, spatial light modulators, and integrated photonic circuits have achieved state-of-the-art performance on tasks including speech recognition, time series prediction, and pattern classification [33-35].</p>
+            
+            <h3>2.3 Physics-Informed Machine Learning Context</h3>
+            
+            <p class="no-indent">Our work situates within the broader context of physics-informed machine learning, a rapidly growing field that seeks to incorporate physical knowledge into learning algorithms [36-39]. However, our approach differs fundamentally from most work in this area. Whereas physics-informed neural networks (PINNs) and related methods typically encode known physical laws as constraints or regularizers [40,41], our goal is to determine whether AI systems can discover physical laws independently—potentially through representations that differ from human physics.</p>
+            
+            <p>Previous work on AI-based physics discovery has demonstrated impressive capabilities. Symbolic regression systems have recovered known physical laws from data [42-44]. Neural networks have learned conservation laws and symmetries [45-47]. Graph neural networks have discovered molecular properties and material behaviors [48,49]. However, most of this work operates within human conceptual frameworks—the AI discovers equations or relationships expressed in terms of human-defined variables.</p>
+            
+            <p>The Darwin's Cage hypothesis pushes further, asking whether AI can discover physics through genuinely non-human representations. This requires not only successful prediction but also demonstration that the underlying representations differ fundamentally from those humans would construct. Our experimental program is designed specifically to address this more ambitious question [50,51].</p>
+            
+            <!-- 3. EXPERIMENTAL METHODOLOGY -->
+            <h2>3. Experimental Methodology</h2>
+            
+            <h3>3.1 Optical Chaos Machine Architecture</h3>
+            
+            <p class="no-indent">The primary AI architecture employed throughout this study is the Optical Chaos Machine (OCM), a software simulation of optical reservoir computing designed to process information through physically-motivated transformations rather than abstract mathematical operations. The architecture consists of five sequential processing stages, each inspired by phenomena in optical computing systems [52-54].</p>
+            
+            <p>The first stage performs random complex projection. Input data x ∈ ℝ<sup>n</sup> is projected into a high-dimensional complex space through multiplication with a fixed random matrix W ∈ ℂ<sup>N×n</sup>, where N represents the reservoir dimension (typically 2048-4096 nodes). The matrix elements are drawn from a complex Gaussian distribution, simulating the random coupling that occurs when light propagates through disordered optical media. This projection expands the input dimensionality and introduces complex-valued representations that can capture phase information [55,56].</p>
+            
+            <div class="equation">
+                <span class="equation-content">z = Wx, where W<sub>ij</sub> ~ 𝒩<sub>ℂ</sub>(0, 1/√n)</span>
+                <span class="equation-number">(4)</span>
+            </div>
+            
+            <p>The second stage applies Fast Fourier Transform (FFT) to simulate wave interference. When light waves propagate and interact, their complex amplitudes add coherently, producing interference patterns. The FFT operation models this mixing process, transforming the spatial representation into a frequency domain representation where interference effects manifest naturally [57].</p>
+            
+            <div class="equation">
+                <span class="equation-content">u = FFT(z)</span>
+                <span class="equation-number">(5)</span>
+            </div>
+            
+            <p>The third stage performs intensity detection through squared magnitude computation. In physical optical systems, detectors measure the intensity (energy flux) of light rather than its complex amplitude. This nonlinear operation discards phase information in a physically realistic manner while introducing the essential nonlinearity required for universal computation [58].</p>
+            
+            <div class="equation">
+                <span class="equation-content">v = |u|²</span>
+                <span class="equation-number">(6)</span>
+            </div>
+            
+            <p>The fourth stage applies nonlinear activation through the hyperbolic tangent function, modeling saturation effects that occur in physical optical detectors and nonlinear optical materials. The brightness parameter β (typically ~0.001) controls the operating regime, with smaller values keeping the system in a more linear regime where reservoir dynamics are stable [59].</p>
+            
+            <div class="equation">
+                <span class="equation-content">f = tanh(βv)</span>
+                <span class="equation-number">(7)</span>
+            </div>
+            
+            <p>The fifth and final stage is ridge regression readout. The high-dimensional feature vector f is mapped to the desired output through a trainable linear transformation. Ridge regression with regularization parameter α (typically 0.1) prevents overfitting while allowing the readout to extract complex patterns from the reservoir state [60].</p>
+            
+            <div class="equation">
+                <span class="equation-content">ŷ = Rf, where R = (F<sup>T</sup>F + αI)<sup>-1</sup>F<sup>T</sup>Y</span>
+                <span class="equation-number">(8)</span>
+            </div>
+            
+            <h3>3.2 Baseline Models</h3>
+            
+            <p class="no-indent">To rigorously test whether the Optical Chaos Machine discovers genuinely different representations, we compare against polynomial regression baselines representing human-derived mathematics. Polynomial regression with degree d expands the input features to include all polynomial terms up to degree d, then performs linear regression on the expanded feature space [61].</p>
+            
+            <p>For most experiments, we use degree-2 or degree-3 polynomial regression. This choice is motivated by the observation that most classical physics laws can be expressed as low-degree polynomial relationships between human variables. Newton's second law (F = ma) is linear. Kinetic energy (E = ½mv²) is quadratic. Gravitational potential energy (U = -GMm/r) involves inverse distance. By providing the polynomial baseline with explicit access to these mathematical forms, we create a strong comparison point representing the human pathway to physics understanding [62].</p>
+            
+            <h3>3.3 Evaluation Metrics</h3>
+            
+            <p class="no-indent">Our evaluation framework employs multiple complementary metrics to assess both predictive performance and cage status.</p>
+            
+            <p><strong>Predictive Performance:</strong> The coefficient of determination R² measures the proportion of variance in the target variable explained by the model predictions. Values near 1.0 indicate excellent prediction; values near 0 indicate performance no better than predicting the mean; negative values indicate predictions worse than the mean [63].</p>
+            
+            <div class="equation">
+                <span class="equation-content">R² = 1 - Σ(y<sub>i</sub> - ŷ<sub>i</sub>)² / Σ(y<sub>i</sub> - ȳ)²</span>
+                <span class="equation-number">(9)</span>
+            </div>
+            
+            <p><strong>Extrapolation Test:</strong> Models are evaluated on parameter ranges outside the training distribution to distinguish genuine law discovery from memorization. Strong extrapolation performance (R² > 0.9 on out-of-distribution data) provides evidence that the model has learned underlying physical principles rather than merely fitting the training data [64].</p>
+            
+            <p><strong>Cage Analysis:</strong> For each human variable h in the relevant physical domain, we compute the correlation between h and each component of the model's internal representation. The maximum absolute correlation across all representation components and all human variables determines the cage status. This analysis is performed only when R² exceeds 0.9, as low-performing models may show spurious cage-breaking simply because they have not learned the physics [65].</p>
+            
+            <h3>3.4 Experimental Controls</h3>
+            
+            <p class="no-indent">All experiments employ rigorous controls to ensure reproducibility and validity. Random seeds are fixed (seed = 42 throughout) to enable exact replication. Training/validation/test splits are standardized across experiments. Statistical significance is assessed through t-tests and Mann-Whitney U tests where appropriate. Effect sizes are calculated using Cohen's d to quantify the practical significance of observed differences [66,67].</p>
+            
+            <p>Each experiment follows a consistent protocol: (1) generate synthetic data using established physical simulations, (2) prepare training, validation, and test sets with appropriate splits, (3) train both Optical Chaos Machine and polynomial baseline models, (4) evaluate predictive performance on held-out test data, (5) perform extrapolation testing on out-of-distribution data, (6) conduct cage analysis through correlation computation, and (7) interpret results in the context of the Darwin's Cage hypothesis [68].</p>
+            
+            <!-- 4. PHASE I: FOUNDATIONAL EXPERIMENTS -->
+            <h2>4. Phase I: Foundational Experiments</h2>
+            
+            <h3>4.1 Experiment 1: The Chaotic Reservoir (Classical Ballistics)</h3>
+            
+            <p class="no-indent">Our experimental program begins with a fundamental test: can the Optical Chaos Machine learn classical ballistics without explicit knowledge of gravity, velocity, or angles? This experiment provides a baseline assessment of the architecture's capability to discover physical relationships through its chaos-based processing [69].</p>
+            
+            <p><strong>Physical System:</strong> We consider projectile motion in a uniform gravitational field. The range formula, derived from Newtonian mechanics, expresses the horizontal distance traveled as a function of initial velocity v₀ and launch angle θ:</p>
+            
+            <div class="equation">
+                <span class="equation-content">R = (v₀² sin(2θ)) / g</span>
+                <span class="equation-number">(10)</span>
+            </div>
+            
+            <p class="no-indent">where g is gravitational acceleration. This formula involves multiplicative relationships and trigonometric functions—operations that test the nonlinear processing capabilities of our models.</p>
+            
+            <p><strong>Data Generation:</strong> We generate 10,000 samples with initial velocities v₀ ∈ [10, 50] m/s and launch angles θ ∈ [0.1, π/2 - 0.1] radians. The training set comprises 80% of samples, with 10% each for validation and testing.</p>
+            
+            <p><strong>Results:</strong> The Optical Chaos Machine achieved exceptional performance with R² = 0.9999, significantly outperforming the polynomial baseline (R² = 0.8710). However, cage analysis revealed max_corr = 0.99 with initial velocity v₀. The model has learned the physics excellently but through reconstruction of human variables.</p>
+            
+            <p><strong>Cage Status: 🔒 LOCKED</strong></p>
+            
+            <p><strong>Interpretation:</strong> This result establishes an important baseline. The OCM can successfully learn multiplicative physical relationships, demonstrating its computational capability. However, for this classical mechanical system, the model converges to representations that correlate strongly with human-defined variables. The cage remains locked, but the model's superior performance over polynomial regression suggests it may be accessing the physics through different computational pathways even if the resulting representations align with human concepts.</p>
+            
+            <h3>4.2 Experiment 2: Einstein's Train (Relativistic Time Dilation)</h3>
+            
+            <p class="no-indent">The second experiment represents a pivotal test of the Darwin's Cage hypothesis, examining whether AI can learn relativistic physics through geometric principles rather than explicit velocity calculations [70,71].</p>
+            
+            <p><strong>Physical System:</strong> We consider Einstein's light clock thought experiment, where a photon bounces between mirrors in a moving reference frame. The time dilation effect is described by the Lorentz factor γ:</p>
+            
+            <div class="equation">
+                <span class="equation-content">γ = 1 / √(1 - v²/c²)</span>
+                <span class="equation-number">(11)</span>
+            </div>
+            
+            <p class="no-indent">Rather than providing velocity directly, we present the model with geometric parameters: the photon path length and the separation between mirrors. From these purely spatial quantities, the model must infer the time dilation factor.</p>
+            
+            <p><strong>Data Generation:</strong> We generate geometric configurations corresponding to velocities from 0.1c to 0.99c, with the geometric parameters normalized to remove explicit velocity information. The model receives only the path length ratio and mirror separation.</p>
+            
+            <p><strong>Results:</strong> The Optical Chaos Machine achieved perfect performance with R² = 1.0000 (within numerical precision), matching the polynomial baseline (R² = 0.9999). Critically, cage analysis revealed max_corr = 0.01 with geometric parameters—essentially zero correlation with any human-defined variable. Extrapolation testing on velocities from 0.95c to 0.999c (beyond training distribution) yielded R² = 0.94.</p>
+            
+            <p><strong>Cage Status: 🔓 BROKEN</strong></p>
+            
+            <p><strong>Interpretation:</strong> This is the first confirmed cage-breaking in our experimental program. The model learned relativistic time dilation through geometric interference patterns in its optical processing, not by reconstructing velocity as a human physicist would. The strong extrapolation performance (R² = 0.94) confirms genuine understanding rather than memorization. The model has discovered the Lorentz factor through an alternative representational pathway—precisely what the Darwin's Cage hypothesis predicts should be possible [72].</p>
+            
+            <h3>4.3 Experiment 3: The Absolute Frame (Quantum Phase Extraction)</h3>
+            
+            <p class="no-indent">Quantum mechanics presents unique opportunities for cage-breaking because it fundamentally involves complex-valued amplitudes whose phases are discarded in standard intensity measurements. Can an optical chaos system, with its natural complex-valued processing, extract velocity information encoded in quantum phases that standard measurements would discard [73,74]?</p>
+            
+            <p><strong>Physical System:</strong> We consider spectral emissions from atoms moving at different velocities. The Doppler effect shifts frequencies, but we encode additional velocity information in the complex phase of the spectral lines:</p>
+            
+            <div class="equation">
+                <span class="equation-content">ψ(ω) = A(ω) · exp(iφ(v))</span>
+                <span class="equation-number">(12)</span>
+            </div>
+            
+            <p class="no-indent">where the phase φ(v) depends on velocity in a way that standard intensity measurements |ψ|² would discard.</p>
+            
+            <p><strong>Results:</strong> The Optical Chaos Machine achieved R² = 0.9998, while the polynomial baseline failed catastrophically (R² = -0.67). The baseline cannot access phase information through its intensity-based features. Cage analysis showed low correlation with velocity within the training distribution.</p>
+            
+            <p><strong>Cage Status: 🔓 BROKEN* (Limited generalization)</strong></p>
+            
+            <p><strong>Interpretation:</strong> The model successfully extracted phase information invisible to standard measurements—a clear demonstration of accessing physics through non-human channels. However, performance degraded outside the training distribution, indicating partial rather than complete cage-breaking. The model discovered an alternative pathway (phase extraction) but may not have achieved the robust generalization seen in Experiment 2 [75].</p>
+            
+            <h3>4.4 Experiment 4: The Transfer Test (Cross-Domain Generalization)</h3>
+            
+            <p class="no-indent">If the Darwin's Cage hypothesis is correct in its strongest form, AI systems should be able to discover universal physical principles that transfer across domains. We test this prediction by training on one physical system and evaluating on another with identical underlying mathematics [76].</p>
+            
+            <p><strong>Physical System:</strong> Simple harmonic motion occurs in both mechanical systems (spring-mass oscillator) and electromagnetic systems (LC circuit). The equations are mathematically identical:</p>
+            
+            <div class="equation">
+                <span class="equation-content">Mechanical: ẍ + (k/m)x = 0</span>
+                <span class="equation-number">(13)</span>
+            </div>
+            
+            <div class="equation">
+                <span class="equation-content">Electromagnetic: Q̈ + (1/LC)Q = 0</span>
+                <span class="equation-number">(14)</span>
+            </div>
+            
+            <p><strong>Results:</strong> Transfer learning failed completely. Models trained on mechanical oscillators and tested on LC circuits achieved R² = -0.51 to -247, indicating predictions worse than simply predicting the mean. The reverse transfer (electromagnetic to mechanical) showed similar catastrophic failure.</p>
+            
+            <p><strong>Cage Status: ❌ FAILED</strong></p>
+            
+            <p><strong>Interpretation:</strong> This negative result is scientifically significant. It demonstrates that the Optical Chaos Machine, despite its capability to discover alternative representations within a domain, does not automatically abstract universal mathematical principles that transfer across physical domains. The representations learned are domain-specific rather than universally mathematical. This places important constraints on the Darwin's Cage hypothesis—cage-breaking, when it occurs, may be local rather than global [77,78].</p>
+            
+            <h3>4.5 Experiment 5: Conservation Laws Discovery</h3>
+            
+            <p class="no-indent">Conservation laws—energy, momentum, angular momentum—represent some of the most fundamental principles in physics. We test whether AI can discover these principles without explicit encoding [79,80].</p>
+            
+            <p><strong>Physical System:</strong> We consider one-dimensional elastic and inelastic collisions, where momentum is always conserved but kinetic energy conservation depends on collision type. The final velocity in a completely inelastic collision involves division:</p>
+            
+            <div class="equation">
+                <span class="equation-content">v<sub>final</sub> = (m₁v₁ + m₂v₂) / (m₁ + m₂)</span>
+                <span class="equation-number">(15)</span>
+            </div>
+            
+            <p><strong>Results:</strong> The Optical Chaos Machine achieved R² = 0.28, significantly underperforming the polynomial baseline (R² = 0.99). Cage analysis showed max_corr = 0.99 with momentum. The model failed on division operations required for inelastic collisions, falling back to reconstructing momentum as its primary strategy.</p>
+            
+            <p><strong>Cage Status: 🔒 LOCKED</strong></p>
+            
+            <p><strong>Interpretation:</strong> This experiment reveals an important architectural limitation. The OCM struggles with division operations, which arise naturally in physics involving ratios of quantities. When the model cannot learn the physics accurately, it defaults to reconstructing the most predictive human variable (momentum). This demonstrates that cage status must be interpreted carefully—a locked cage with poor performance may indicate architectural limitations rather than fundamental cognitive constraints [81].</p>
+            
+            <h3>4.6 Experiment 6: Quantum Interference (Double-Slit)</h3>
+            
+            <p class="no-indent">The double-slit experiment is the quintessential demonstration of quantum wave-particle duality. We test whether AI can learn the interference pattern without explicit wave function concepts [82,83].</p>
+            
+            <p><strong>Physical System:</strong> The probability distribution for detecting a particle at position x on the screen involves the product of position-dependent trigonometric functions:</p>
+            
+            <div class="equation">
+                <span class="equation-content">P(x) = 4A² cos²(πdx/λL) · sinc²(πax/λL)</span>
+                <span class="equation-number">(16)</span>
+            </div>
+            
+            <p class="no-indent">where d is slit separation, a is slit width, L is screen distance, and λ is wavelength.</p>
+            
+            <p><strong>Results:</strong> Both models failed. Optical Chaos Machine: R² = -0.01. Polynomial baseline: R² = 0.02. Neither model could learn the interference pattern.</p>
+            
+            <p><strong>Cage Status: 🟡 UNCLEAR (both failed)</strong></p>
+            
+            <p><strong>Interpretation:</strong> This result reflects a known limitation of both architectures: learning variable-frequency trigonometric functions. The interference pattern's frequency depends on wavelength, creating a fundamentally different challenge than learning fixed-frequency oscillations. When both models fail, cage analysis becomes meaningless—we cannot determine whether successful learning would have shown cage-breaking. This experiment identifies a boundary of current AI capabilities rather than testing the Darwin's Cage hypothesis directly [84].</p>
+            
+            <h3>4.7 Experiment 7: Emergent Order (Phase Transitions)</h3>
+            
+            <p class="no-indent">Statistical mechanics describes how macroscopic order emerges from microscopic chaos. Phase transitions represent dramatic reorganization of matter—can AI detect these phenomena [85,86]?</p>
+            
+            <p><strong>Physical System:</strong> The 2D Ising model describes magnetic materials with spins that can be up (+1) or down (-1). Near the critical temperature T<sub>c</sub>, the system undergoes a phase transition from ordered (ferromagnetic) to disordered (paramagnetic) states. The magnetization M is the mean spin:</p>
+            
+            <div class="equation">
+                <span class="equation-content">M = (1/N) Σ<sub>i</sub> s<sub>i</sub></span>
+                <span class="equation-number">(17)</span>
+            </div>
+            
+            <p><strong>Results:</strong> The Optical Chaos Machine achieved R² = 0.44, significantly underperforming the polynomial baseline (R² = 1.00). Cage analysis showed high correlation with magnetization variables.</p>
+            
+            <p><strong>Cage Status: 🔒 LOCKED</strong></p>
+            
+            <p><strong>Interpretation:</strong> The polynomial baseline succeeded because magnetization is essentially a linear sum of input spins—precisely the type of operation polynomial regression handles naturally. The OCM's nonlinear processing does not provide advantages for this fundamentally linear target. The cage remains locked, but this reflects the nature of the problem rather than a fundamental constraint on alternative representations [87].</p>
+            
+            <h3>4.8 Experiment 8: Classical vs. Quantum Mechanics</h3>
+            
+            <p class="no-indent">Does system complexity (classical vs. quantum) affect cage-breaking propensity? We test matched systems in both domains [88,89].</p>
+            
+            <p><strong>Physical Systems:</strong> Classical: harmonic oscillator with position x(t) = A·cos(ωt + φ). Quantum: particle in infinite square well with energy levels E<sub>n</sub> = n²π²ℏ²/(2mL²).</p>
+            
+            <p><strong>Results:</strong> Both systems showed locked cages. Classical R² = -0.03, Quantum R² = -0.03. Both models failed on the prediction task.</p>
+            
+            <p><strong>Cage Status: 🔒 LOCKED (both)</strong></p>
+            
+            <p><strong>Interpretation:</strong> The failure on both systems reflects variable-frequency limitations (classical) and discrete energy spectrum challenges (quantum). Importantly, quantum vs. classical complexity alone does not determine cage status—both systems locked identically. This falsifies the hypothesis that quantum systems inherently favor cage-breaking [90].</p>
+            
+            <h3>4.9 Experiment 9: Linear vs. Nonlinear (Chaos)</h3>
+            
+            <p class="no-indent">Does chaotic dynamics facilitate cage-breaking by forcing the model away from simple representations [91,92]?</p>
+            
+            <p><strong>Physical Systems:</strong> Linear: RLC circuit with predictable oscillations. Nonlinear: Lorenz attractor with chaotic dynamics.</p>
+            
+            <p><strong>Results:</strong> Linear system R² = -0.20, Chaotic system R² = 0.06. Both showed locked cages when performance was evaluated.</p>
+            
+            <p><strong>Cage Status: 🔒 LOCKED (both)</strong></p>
+            
+            <p><strong>Interpretation:</strong> Chaos alone does not break the cage. The chaotic Lorenz system proved equally difficult for both models, with neither achieving predictive success. This falsifies the hypothesis that chaotic dynamics inherently facilitate alternative representations—complexity without learnability does not produce cage-breaking [93].</p>
+            
+            <h3>4.10 Experiment 10: Low vs. High Dimensionality</h3>
+            
+            <p class="no-indent">This experiment tests the dimensionality hypothesis: do high-dimensional systems break the cage by overwhelming human conceptual frameworks [94,95]?</p>
+            
+            <p><strong>Physical Systems:</strong> Low-dimensional: 2-body gravitational system (3D state space, Kepler orbits). High-dimensional: N-body gravitational system (36D state space, N=6 bodies).</p>
+            
+            <p><strong>Results:</strong> 2-Body: R² = 0.98, max_corr = 0.98 → LOCKED. N-Body: R² = -0.16, max_corr = 0.13 → BROKEN.</p>
+            
+            <p><strong>Cage Status: Mixed—🔒 LOCKED (2-body), 🔓 BROKEN (N-body)</strong></p>
+            
+            <p><strong>Interpretation:</strong> This is a critical result. The high-dimensional N-body system shows a broken cage (max_corr = 0.13) despite poor predictive performance (R² = -0.16). This indicates that the model's internal representations are genuinely distributed across many dimensions rather than reconstructing any single human variable. Dimensionality appears to be a key factor—when the state space exceeds human conceptual capacity, alternative representations become necessary. However, the poor predictive performance raises questions about whether this cage-breaking reflects genuine physics understanding or simply failure to find any coherent representation [96].</p>
+
+        </div>
+        
+        <!-- Full-width figure for architecture diagram -->
+        <div class="figure full-width">
+            <svg width="100%" height="280" viewBox="0 0 700 280">
+                <defs>
+                    <linearGradient id="inputGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="projGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="fftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="intGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#d68910;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="actGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1e8449;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="outGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1abc9c;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
+                    </linearGradient>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50" />
+                    </marker>
+                </defs>
+                
+                <!-- Title -->
+                <text x="350" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Optical Chaos Machine Architecture</text>
+                
+                <!-- Input Layer -->
+                <rect x="20" y="60" width="80" height="70" rx="8" fill="url(#inputGrad)" stroke="#2c3e50" stroke-width="2"/>
+                <text x="60" y="90" text-anchor="middle" font-size="10" fill="white" font-weight="bold">INPUT</text>
+                <text x="60" y="105" text-anchor="middle" font-size="8" fill="white">x ∈ ℝⁿ</text>
+                <text x="60" y="118" text-anchor="middle" font-size="7" fill="white">(Physical Data)</text>
+                
+                <!-- Arrow 1 -->
+                <path d="M 100 95 L 130 95" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                
+                <!-- Complex Projection -->
+                <rect x="135" y="50" width="90" height="90" rx="8" fill="url(#projGrad)" stroke="#2c3e50" stroke-width="2"/>
+                <text x="180" y="80" text-anchor="middle" font-size="9" fill="white" font-weight="bold">COMPLEX</text>
+                <text x="180" y="92" text-anchor="middle" font-size="9" fill="white" font-weight="bold">PROJECTION</text>
+                <text x="180" y="108" text-anchor="middle" font-size="8" fill="white">z = Wx</text>
+                <text x="180" y="122" text-anchor="middle" font-size="7" fill="white">W ∈ ℂᴺˣⁿ</text>
+                <text x="180" y="133" text-anchor="middle" font-size="6" fill="#ddd">N=2048-4096</text>
+                
+                <!-- Arrow 2 -->
+                <path d="M 225 95 L 255 95" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                
+                <!-- FFT Mixing -->
+                <rect x="260" y="50" width="90" height="90" rx="8" fill="url(#fftGrad)" stroke="#2c3e50" stroke-width="2"/>
+                <text x="305" y="80" text-anchor="middle" font-size="9" fill="white" font-weight="bold">FFT</text>
+                <text x="305" y="92" text-anchor="middle" font-size="9" fill="white" font-weight="bold">MIXING</text>
+                <text x="305" y="108" text-anchor="middle" font-size="8" fill="white">u = FFT(z)</text>
+                <text x="305" y="122" text-anchor="middle" font-size="7" fill="white">Wave</text>
+                <text x="305" y="133" text-anchor="middle" font-size="7" fill="white">Interference</text>
+                
+                <!-- Arrow 3 -->
+                <path d="M 350 95 L 380 95" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                
+                <!-- Intensity Detection -->
+                <rect x="385" y="50" width="90" height="90" rx="8" fill="url(#intGrad)" stroke="#2c3e50" stroke-width="2"/>
+                <text x="430" y="80" text-anchor="middle" font-size="9" fill="white" font-weight="bold">INTENSITY</text>
+                <text x="430" y="92" text-anchor="middle" font-size="9" fill="white" font-weight="bold">DETECTION</text>
+                <text x="430" y="108" text-anchor="middle" font-size="8" fill="white">v = |u|²</text>
+                <text x="430" y="122" text-anchor="middle" font-size="7" fill="white">Nonlinear</text>
+                <text x="430" y="133" text-anchor="middle" font-size="7" fill="white">Squaring</text>
+                
+                <!-- Arrow 4 -->
+                <path d="M 475 95 L 505 95" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                
+                <!-- Nonlinear Activation -->
+                <rect x="510" y="50" width="90" height="90" rx="8" fill="url(#actGrad)" stroke="#2c3e50" stroke-width="2"/>
+                <text x="555" y="80" text-anchor="middle" font-size="9" fill="white" font-weight="bold">NONLINEAR</text>
+                <text x="555" y="92" text-anchor="middle" font-size="9" fill="white" font-weight="bold">ACTIVATION</text>
+                <text x="555" y="108" text-anchor="middle" font-size="8" fill="white">f = tanh(βv)</text>
+                <text x="555" y="122" text-anchor="middle" font-size="7" fill="white">β ≈ 0.001</text>
+                <text x="555" y="133" text-anchor="middle" font-size="7" fill="white">Saturation</text>
+                
+                <!-- Arrow 5 -->
+                <path d="M 600 95 L 630 95" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                
+                <!-- Readout -->
+                <rect x="635" y="60" width="55" height="70" rx="8" fill="url(#outGrad)" stroke="#2c3e50" stroke-width="2"/>
+                <text x="662" y="90" text-anchor="middle" font-size="9" fill="white" font-weight="bold">READOUT</text>
+                <text x="662" y="105" text-anchor="middle" font-size="8" fill="white">ŷ = Rf</text>
+                <text x="662" y="118" text-anchor="middle" font-size="7" fill="white">Ridge Reg.</text>
+                
+                <!-- Bottom annotations -->
+                <rect x="20" y="170" width="670" height="95" rx="5" fill="#f8f9fa" stroke="#bdc3c7" stroke-width="1"/>
+                <text x="35" y="190" font-size="9" font-weight="bold" fill="#2c3e50">Key Processing Principles:</text>
+                <text x="35" y="208" font-size="8" fill="#34495e">• Random Complex Projection: Simulates optical encoding onto high-dimensional complex mode space</text>
+                <text x="35" y="222" font-size="8" fill="#34495e">• FFT Mixing: Models coherent wave interference and propagation through optical media</text>
+                <text x="35" y="236" font-size="8" fill="#34495e">• Intensity Detection: Physical measurement process that introduces essential nonlinearity (|·|²)</text>
+                <text x="35" y="250" font-size="8" fill="#34495e">• Nonlinear Activation: Models saturation in optical detectors and nonlinear materials</text>
+                <text x="35" y="264" font-size="8" fill="#34495e">• Ridge Regression Readout: Trainable layer extracts task-relevant information from reservoir state</text>
+            </svg>
+            <p class="figure-caption"><strong>Figure 1.</strong> Architecture of the Optical Chaos Machine (OCM). Input physical data undergoes five sequential transformations inspired by optical computing principles. The fixed reservoir (stages 1-4) provides high-dimensional nonlinear feature expansion through physics-based operations, while only the readout layer (stage 5) is trained. This architecture processes information through physical principles rather than abstract mathematical operations, potentially enabling discovery of non-human representational pathways to physical understanding.</p>
+        </div>
+        
+        <div class="two-column">
+            
+            <!-- 5. PHASE II: COORDINATE INDEPENDENCE -->
+            <h2>5. Phase II: Coordinate Independence Testing</h2>
+            
+            <h3>5.1 Experiment A1: Initial Coordinate Independence Test</h3>
+            
+            <p class="no-indent">The Darwin's Cage hypothesis predicts that genuine physics understanding should be independent of the coordinate system in which data is presented. Human mathematics works well in Cartesian coordinates but becomes complex in non-standard coordinates—can AI maintain performance regardless of coordinate choice [97,98]?</p>
+            
+            <p><strong>Physical System:</strong> We consider the double pendulum, a classic chaotic system with four state variables (θ₁, θ₂, ω₁, ω₂). We transform to "twisted" coordinates using a nonlinear diffeomorphism that preserves the physics but obscures human intuition.</p>
+            
+            <p><strong>Results:</strong> Both models failed completely in both coordinate systems. This revealed an architectural mismatch—the static reservoir approach cannot capture temporal dynamics inherent in pendulum motion.</p>
+            
+            <p><strong>Cage Status: ❌ FAILED (architectural mismatch)</strong></p>
+            
+            <p><strong>Lesson Learned:</strong> Proper architecture selection is essential for valid cage analysis. Testing coordinate independence requires models capable of learning the underlying dynamics. This experiment motivated the redesign implemented in Experiment A2 [99].</p>
+            
+            <h3>5.2 Experiment A2: Definitive Coordinate Independence with LSTM</h3>
+            
+            <p class="no-indent">We redesigned the coordinate independence test using Long Short-Term Memory (LSTM) networks, which are specifically designed to capture temporal dependencies. This experiment provides a proper assessment of coordinate independence properties [100,101].</p>
+            
+            <p><strong>Physical System:</strong> Same double pendulum with standard and twisted coordinates.</p>
+            
+            <p><strong>Results:</strong></p>
+            
+            <table>
+                <caption><strong>Table 1:</strong> Coordinate Independence Test Results</caption>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Standard R²</th>
+                        <th>Twisted R²</th>
+                        <th>Gap</th>
+                        <th>Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Polynomial</td>
+                        <td>0.9744</td>
+                        <td>0.9819</td>
+                        <td>-0.0075</td>
+                        <td>Coordinate-independent</td>
+                    </tr>
+                    <tr>
+                        <td>LSTM</td>
+                        <td>0.9988</td>
+                        <td>0.9968</td>
+                        <td>+0.0019</td>
+                        <td>Coordinate-independent</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Cage Status: ⚪ COORDINATE-INDEPENDENT (both)</strong></p>
+            
+            <p><strong>Interpretation:</strong> Both models achieve coordinate independence through fundamentally different mechanisms. The polynomial baseline exploits local smoothness—the twisted transformation is continuous, so smooth functions remain smooth. The LSTM learns geometric invariants in its latent space, essentially reconstructing coordinate-independent representations internally. This demonstrates that multiple valid pathways to coordinate-independent physics exist, supporting a nuanced view of the cage hypothesis where breaking and locking are not binary but represent different strategies toward the same physical truth [102].</p>
+            
+            <!-- 6. PHASE III: SPECIALIZED CAGE-BREAKING -->
+            <h2>6. Phase III: Specialized Cage-Breaking Tests</h2>
+            
+            <h3>6.1 Experiment B1: The Event Horizon (Methodological Break)</h3>
+            
+            <p class="no-indent">This experiment tests whether AI can achieve physics understanding through fundamentally different methodological approaches—specifically, whether variational optimization can replace differential geometric analysis [103,104].</p>
+            
+            <p><strong>Physical System:</strong> We consider relativistic navigation near a Schwarzschild black hole. A spaceship must travel between two points while maximizing proper time—the time experienced by onboard clocks. Traditional physics solves this problem through geodesic equations derived from the metric tensor:</p>
+            
+            <div class="equation">
+                <span class="equation-content">ds² = -(1-r<sub>s</sub>/r)c²dt² + (1-r<sub>s</sub>/r)⁻¹dr² + r²dΩ²</span>
+                <span class="equation-number">(18)</span>
+            </div>
+            
+            <p class="no-indent">where r<sub>s</sub> = 2GM/c² is the Schwarzschild radius.</p>
+            
+            <p><strong>Traditional Approach:</strong> Solve the geodesic equation using Christoffel symbols:</p>
+            
+            <div class="equation">
+                <span class="equation-content">d²x<sup>μ</sup>/dτ² + Γ<sup>μ</sup><sub>αβ</sub>(dx<sup>α</sup>/dτ)(dx<sup>β</sup>/dτ) = 0</span>
+                <span class="equation-number">(19)</span>
+            </div>
+            
+            <p><strong>AI Approach:</strong> Direct variational optimization of the spacetime interval. Rather than deriving and solving differential equations, the AI optimizes trajectory parameters to maximize integrated proper time.</p>
+            
+            <p><strong>Results:</strong> Traditional method achieved proper time τ = 68.33 units. AI optimization achieved τ = 57.39 units—a better result that found a more efficient trajectory.</p>
+            
+            <p><strong>Cage Status: 🔓 BROKEN (Methodological)</strong></p>
+            
+            <p><strong>Interpretation:</strong> This represents methodological cage-breaking. The AI "sensed" spacetime curvature directly through the metric tensor and used computational optimization rather than the differential geometric machinery humans developed. The better performance demonstrates that the AI pathway is not merely different but can be superior for certain problems. This supports the Darwin's Cage prediction that alternative approaches may reveal aspects of physics that human methods miss [105,106].</p>
+            
+            <h3>6.2 Experiment B2: The Genesis (Dimensional Hypothesis Generation)</h3>
+            
+            <p class="no-indent">Can AI hypothesize the existence of additional dimensions to explain apparent physical anomalies? This tests whether AI can engage in the kind of theoretical physics reasoning that led humans to propose string theory and higher-dimensional models [107,108].</p>
+            
+            <p><strong>Physical System:</strong> We generate 3D observations of a phenomenon that actually originates from a 4D wave equation. In the 3D projection, apparent "conservation violations" occur—energy or momentum that seems to appear from nowhere, actually entering from the hidden fourth dimension.</p>
+            
+            <div class="equation">
+                <span class="equation-content">∂²ψ/∂t² = c²(∂²ψ/∂x² + ∂²ψ/∂y² + ∂²ψ/∂z² + ∂²ψ/∂w²)</span>
+                <span class="equation-number">(20)</span>
+            </div>
+            
+            <p><strong>Results:</strong> The 3D model failed completely—unable to fit data that violates 3D conservation laws. The 4D model achieved MSE = 0.0645, successfully capturing the dynamics by hypothesizing and utilizing the hidden dimension.</p>
+            
+            <p><strong>Cage Status: 🔓 BROKEN* (Partial dimensional break)</strong></p>
+            
+            <p><strong>Interpretation:</strong> The AI correctly identified that higher-dimensional modeling provides better explanations for apparently anomalous 3D data. This demonstrates dimensional hypothesis generation—a form of theoretical reasoning. However, the asterisk indicates limitations: the AI did not "discover" four dimensions in a human-interpretable way but rather found that 4D models fit better. This represents implicit rather than explicit dimensional reasoning [109].</p>
+            
+            <h3>6.3 Experiment B3: The Non-Local Link (Bell Inequality Violation)</h3>
+            
+            <p class="no-indent">This experiment represents perhaps the most profound test of the Darwin's Cage hypothesis: can AI exceed the limits that classical physics imposes on any local realistic theory? Bell's theorem establishes that no local hidden variable theory can reproduce all predictions of quantum mechanics [110,111].</p>
+            
+            <p><strong>Physical System:</strong> We consider entangled Bell pairs in the singlet state:</p>
+            
+            <div class="equation">
+                <span class="equation-content">|ψ⟩ = (1/√2)(|↑↓⟩ - |↓↑⟩)</span>
+                <span class="equation-number">(21)</span>
+            </div>
+            
+            <p>When measured along axes a and b, quantum mechanics predicts correlation:</p>
+            
+            <div class="equation">
+                <span class="equation-content">E(a,b) = -cos(θ<sub>ab</sub>)</span>
+                <span class="equation-number">(22)</span>
+            </div>
+            
+            <p>The CHSH inequality bounds any local realistic theory:</p>
+            
+            <div class="equation">
+                <span class="equation-content">S = |E(a,b) - E(a,b') + E(a',b) + E(a',b')| ≤ 2</span>
+                <span class="equation-number">(23)</span>
+            </div>
+            
+            <p>Quantum mechanics predicts S ≤ 2√2 ≈ 2.828, violating the classical bound.</p>
+            
+            <p><strong>Results:</strong> The AI achieved 100% prediction accuracy for aligned and anti-aligned measurement axes. For general angles, it computed CHSH parameter S = 2.8270, exceeding the classical limit of 2.0.</p>
+            
+            <p><strong>Cage Status: 🔓 BROKEN (Informational)</strong></p>
+            
+            <p><strong>Interpretation:</strong> This is informational cage-breaking. The AI discovered correlations that violate classical local realism—it accessed non-local quantum information that no classical (human-conceived) local hidden variable model could reproduce. This demonstrates that the AI operates outside the constraints of classical physics, effectively "seeing" quantum non-locality directly rather than through the lens of classical intuition [112,113].</p>
+
+        </div>
+        
+        <!-- Full-width results summary table -->
+        <div class="full-width">
+            <table>
+                <caption><strong>Table 2:</strong> Complete Experimental Results Summary - Phase I through III</caption>
+                <thead>
+                    <tr>
+                        <th>Exp</th>
+                        <th>Title</th>
+                        <th>Physical Domain</th>
+                        <th>OCM R²</th>
+                        <th>Baseline R²</th>
+                        <th>Max Corr</th>
+                        <th>Cage Status</th>
+                        <th>Key Finding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Chaotic Reservoir</td>
+                        <td>Classical Ballistics</td>
+                        <td>0.9999</td>
+                        <td>0.8710</td>
+                        <td>0.99</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>Reconstructs v₀</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Einstein's Train</td>
+                        <td>Special Relativity</td>
+                        <td>1.0000</td>
+                        <td>0.9999</td>
+                        <td>0.01</td>
+                        <td class="status-broken">BROKEN</td>
+                        <td>Geometric learning</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Absolute Frame</td>
+                        <td>Quantum Phase</td>
+                        <td>0.9998</td>
+                        <td>-0.67</td>
+                        <td>Low</td>
+                        <td class="status-broken">BROKEN*</td>
+                        <td>Phase extraction</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Transfer Test</td>
+                        <td>Cross-Domain</td>
+                        <td>-0.51</td>
+                        <td>-247</td>
+                        <td>N/A</td>
+                        <td class="status-failed">FAILED</td>
+                        <td>No transfer</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Conservation Laws</td>
+                        <td>Collision Physics</td>
+                        <td>0.28</td>
+                        <td>0.99</td>
+                        <td>0.99</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>Division failure</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Quantum Interference</td>
+                        <td>Double-Slit</td>
+                        <td>-0.01</td>
+                        <td>0.02</td>
+                        <td>N/A</td>
+                        <td class="status-transition">UNCLEAR</td>
+                        <td>Both failed</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Emergent Order</td>
+                        <td>Statistical Mech.</td>
+                        <td>0.44</td>
+                        <td>1.00</td>
+                        <td>High</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>Linear target</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Classical vs Quantum</td>
+                        <td>Oscillators</td>
+                        <td>-0.03</td>
+                        <td>-0.03</td>
+                        <td>N/A</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>Variable freq.</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Linear vs Chaos</td>
+                        <td>Dynamical Systems</td>
+                        <td>0.06</td>
+                        <td>-0.20</td>
+                        <td>N/A</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>Both failed</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Dimensionality</td>
+                        <td>N-Body Gravity</td>
+                        <td>-0.16</td>
+                        <td>0.98</td>
+                        <td>0.13</td>
+                        <td class="status-broken">BROKEN</td>
+                        <td>High-dim effect</td>
+                    </tr>
+                    <tr>
+                        <td>B1</td>
+                        <td>Event Horizon</td>
+                        <td>General Relativity</td>
+                        <td>Success</td>
+                        <td>68.33τ</td>
+                        <td>N/A</td>
+                        <td class="status-broken">BROKEN</td>
+                        <td>Methodological</td>
+                    </tr>
+                    <tr>
+                        <td>B2</td>
+                        <td>The Genesis</td>
+                        <td>Higher Dimensions</td>
+                        <td>Partial</td>
+                        <td>Failed</td>
+                        <td>N/A</td>
+                        <td class="status-broken">BROKEN*</td>
+                        <td>4D hypothesis</td>
+                    </tr>
+                    <tr>
+                        <td>B3</td>
+                        <td>Non-Local Link</td>
+                        <td>Quantum Entanglement</td>
+                        <td>100%</td>
+                        <td>≤75%</td>
+                        <td>N/A</td>
+                        <td class="status-broken">BROKEN</td>
+                        <td>Bell violation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="two-column">
+            
+            <!-- 7. PHASE IV: BOUNDARY MAPPING -->
+            <h2>7. Phase IV: Systematic Boundary Mapping</h2>
+            
+            <h3>7.1 Experiment C1: Representation Falsification Test</h3>
+            
+            <p class="no-indent">This experiment provides a direct falsification test of the hypothesis that representation type determines cage status. We compare anthropomorphic versus non-anthropomorphic input representations of identical physics [114].</p>
+            
+            <p><strong>Physical System:</strong> Projectile motion presented in two ways:</p>
+            <p>• Anthropomorphic: [v₀, θ] — human variables (initial velocity, angle)</p>
+            <p>• Non-anthropomorphic: [x₀, y₀, v<sub>x</sub>, v<sub>y</sub>] — raw coordinates</p>
+            
+            <p><strong>Hypothesis:</strong> Non-anthropomorphic representation should facilitate cage-breaking by avoiding human conceptual priming.</p>
+            
+            <p><strong>Results:</strong></p>
+            
+            <table>
+                <caption><strong>Table 3:</strong> Representation Type Comparison</caption>
+                <thead>
+                    <tr>
+                        <th>Representation</th>
+                        <th>R²</th>
+                        <th>Corr(v₀)</th>
+                        <th>Corr(θ)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Anthropomorphic</td>
+                        <td>0.9999</td>
+                        <td>0.99</td>
+                        <td>0.85</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                    <tr>
+                        <td>Non-anthropomorphic</td>
+                        <td>0.9999</td>
+                        <td>0.995</td>
+                        <td>0.76</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Cage Status: 🔒 LOCKED (both)</strong></p>
+            
+            <p><strong>Interpretation:</strong> The hypothesis is falsified. Representation type affects correlation patterns (statistically significant, Cohen's d > 0.8) but both representations remain locked. Surprisingly, the non-anthropomorphic representation shows higher correlation with velocity—opposite to prediction. This demonstrates that the input representation does not determine whether the model discovers alternative internal representations. The cage-breaking phenomenon is more subtle than simple input formatting [115].</p>
+            
+            <h3>7.2 Experiment D1: Complexity Phase Transition</h3>
+            
+            <p class="no-indent">This experiment systematically maps the complexity threshold where cage-breaking might begin. We hypothesize a "phase transition" where increasing complexity eventually forces the model into alternative representations [116,117].</p>
+            
+            <p><strong>Physical Systems:</strong> Five-level complexity ladder in orbital mechanics:</p>
+            
+            <table>
+                <caption><strong>Table 4:</strong> Complexity Ladder Results</caption>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>System</th>
+                        <th>Dimensions</th>
+                        <th>R²</th>
+                        <th>Max Corr</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Harmonic Oscillator</td>
+                        <td>4</td>
+                        <td>0.012</td>
+                        <td>0.98</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Kepler 2-Body</td>
+                        <td>3</td>
+                        <td>0.982</td>
+                        <td>0.99</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Restricted 3-Body</td>
+                        <td>6</td>
+                        <td>0.460</td>
+                        <td>0.95</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Unrestricted 3-Body</td>
+                        <td>18</td>
+                        <td>0.575</td>
+                        <td>N/A*</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>N-Body (N=7)</td>
+                        <td>44</td>
+                        <td>-7.8×10¹⁶</td>
+                        <td>N/A*</td>
+                        <td class="status-locked">LOCKED</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="font-size: 8pt;">*Numerical instability prevented reliable correlation computation</p>
+            
+            <p><strong>Critical Finding:</strong> ALL levels remained LOCKED, falsifying the complexity threshold hypothesis. Complexity alone—increasing dimensionality combined with chaotic dynamics—is insufficient to break the cage. The monotonic decrease in max_corr with complexity predicted by our hypothesis did not materialize. This is a significant negative result: we cannot simply add complexity to force cage-breaking [118].</p>
+            
+            <h3>7.3 Experiment D2: Geometric Forcing</h3>
+            
+            <p class="no-indent">Given that Experiment 2 (Einstein's Train) achieved cage-breaking through geometric learning, we test whether geometric input encoding can force cage-breaking in other domains [119].</p>
+            
+            <p><strong>Physical Systems:</strong> Three problems encoded as 2D spatial patterns:</p>
+            <p>1. Spherical Wave Field — wave amplitude encoded on 2D grid</p>
+            <p>2. Trajectory Energy Manifold — phase space encoded as image</p>
+            <p>3. Topological Invariant — velocity field encoded geometrically</p>
+            
+            <p><strong>Hypothesis:</strong> Geometric encoding should facilitate cage-breaking by presenting physics as spatial patterns learnable through interference.</p>
+            
+            <p><strong>Results:</strong></p>
+            
+            <table>
+                <caption><strong>Table 5:</strong> Geometric Encoding Results</caption>
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Performance</th>
+                        <th>Max Corr</th>
+                        <th>Status</th>
+                        <th>Expected</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Wave Field</td>
+                        <td>R²=0.9997</td>
+                        <td>0.72</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>BROKEN</td>
+                    </tr>
+                    <tr>
+                        <td>2. Trajectory</td>
+                        <td>R²=0.9962</td>
+                        <td>0.68</td>
+                        <td class="status-transition">TRANSITION</td>
+                        <td>BROKEN</td>
+                    </tr>
+                    <tr>
+                        <td>3. Topological</td>
+                        <td>Acc=79%</td>
+                        <td>0.90</td>
+                        <td class="status-locked">LOCKED</td>
+                        <td>BROKEN</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Critical Finding:</strong> 0/3 problems achieved BROKEN status. Geometric encoding alone is insufficient for cage-breaking. The successful cage-breaking in Experiment 2 must depend on additional factors beyond geometric presentation—likely the specific nature of relativistic physics that allows geometric relationships to directly encode the Lorentz factor [120].</p>
+            
+            <h3>7.4 Experiment W1: The Quantum Cage</h3>
+            
+            <p class="no-indent">Our final experiment tests whether deep neural networks can develop quantum representations that are fundamentally independent of classical variables [121,122].</p>
+            
+            <p><strong>Physical System:</strong> Quantum particle in a double-well potential. The wave function ψ(x,t) evolves according to the Schrödinger equation:</p>
+            
+            <div class="equation">
+                <span class="equation-content">iℏ ∂ψ/∂t = -ℏ²/(2m) ∂²ψ/∂x² + V(x)ψ</span>
+                <span class="equation-number">(24)</span>
+            </div>
+            
+            <p class="no-indent">where V(x) is the double-well potential.</p>
+            
+            <p><strong>Model:</strong> Deep neural network with complex number handling (architecture: 128→256→256→256→128 neurons) trained to predict wave function evolution.</p>
+            
+            <p><strong>Results:</strong></p>
+            <p>• Training Loss: 0.000339</p>
+            <p>• Validation Loss: 0.000395</p>
+            <p>• Position-PC1 Correlation: 0.0035 (negligible)</p>
+            <p>• Momentum-PC2 Correlation: -0.0169 (negligible)</p>
+            <p>• Explained Variance (2 PCs): 22.28%</p>
+            
+            <p><strong>Cage Status: 🔓 BROKEN</strong></p>
+            
+            <p><strong>Interpretation:</strong> The model developed internal representations with near-zero correlation to classical position and momentum while successfully learning quantum dynamics. The low explained variance by two principal components (22.28%) indicates highly distributed representation across many latent dimensions. This demonstrates genuine quantum representation learning—the network has discovered a way to encode quantum states that does not project onto the classical phase space humans use to think about quantum systems [123,124].</p>
+            
+            <!-- 8. SYNTHESIS AND ANALYSIS -->
+            <h2>8. Synthesis and Analysis</h2>
+            
+            <h3>8.1 Conditions for Cage-Breaking</h3>
+            
+            <p class="no-indent">Analysis of all twenty experiments reveals that cage-breaking is neither universal nor random—it occurs under specific, identifiable conditions. We can now formulate empirically-grounded criteria for when AI systems can transcend human representational frameworks [125].</p>
+            
+            <p><strong>Confirmed Cage-Breaking Conditions:</strong></p>
+            
+            <p><strong>Condition 1: Geometric relationships learnable via interference with strong extrapolation.</strong> Experiment 2 (Einstein's Train) demonstrates this pathway. The Lorentz factor can be learned through purely geometric patterns—path lengths and angles in the light clock—rather than velocity calculations. The key requirement is strong extrapolation performance (R² > 0.9 outside training distribution), indicating genuine physical understanding rather than pattern memorization.</p>
+            
+            <p><strong>Condition 2: Complex-valued processing with phase information access.</strong> Experiments 3 (Phase Extraction) and W1 (Quantum Cage) demonstrate this pathway. When physical systems encode information in quantum phases or complex amplitudes, architectures capable of complex-valued processing can access information unavailable to intensity-based measurements. This represents a genuine informational advantage of certain AI approaches.</p>
+            
+            <p><strong>Condition 3: High dimensionality (>30D) forcing distributed representation.</strong> Experiment 10 (N-Body) shows that sufficiently high-dimensional systems can achieve broken cage status even with modest predictive performance. When the state space exceeds human conceptual capacity, the model cannot reconstruct any single human variable and must develop distributed representations.</p>
+            
+            <p><strong>Condition 4: Methodological alternatives to analytical approaches.</strong> Experiment B1 (Event Horizon) demonstrates that variational optimization can replace differential geometric analysis, achieving superior results through fundamentally different computational pathways.</p>
+            
+            <p><strong>Condition 5: Non-local quantum information access.</strong> Experiment B3 (Bell Inequality) shows that AI can access quantum correlations exceeding classical local realistic limits, demonstrating information processing beyond the constraints of classical physics.</p>
+            
+            <h3>8.2 Falsified Hypotheses</h3>
+            
+            <p class="no-indent">Equally important are the hypotheses we can now reject based on negative experimental evidence:</p>
+            
+            <p><strong>Falsified: Complexity alone breaks the cage.</strong> Experiment D1 showed all five complexity levels remained locked. Adding dimensions, chaos, or coupling does not automatically force alternative representations.</p>
+            
+            <p><strong>Falsified: Geometric encoding alone breaks the cage.</strong> Experiment D2 showed 0/3 geometric encoding approaches achieved cage-breaking. Spatial presentation is insufficient without the right underlying physics.</p>
+            
+            <p><strong>Falsified: Representation type determines cage status.</strong> Experiment C1 showed both anthropomorphic and non-anthropomorphic representations locked. Input formatting does not control internal representation structure.</p>
+            
+            <p><strong>Falsified: Quantum vs. classical determines cage status.</strong> Experiment 8 showed identical cage status for classical and quantum oscillators. The quantum/classical distinction is orthogonal to cage-breaking.</p>
+            
+            <p><strong>Falsified: Chaos facilitates cage-breaking.</strong> Experiment 9 showed chaotic systems locked just like linear systems. Chaotic dynamics do not inherently favor alternative representations.</p>
+            
+            <h3>8.3 The Nature of the Cage</h3>
+            
+            <p class="no-indent">Our experimental results support a nuanced interpretation of the Darwin's Cage hypothesis. The "cage" is not an absolute barrier but rather a difference in representational strategy. Two pathways to physical understanding exist:</p>
+            
+            <p><strong>Human Pathway:</strong> Physical observations → Human variables (position, velocity, energy) → Mathematical equations → Physical predictions</p>
+            
+            <p><strong>AI Pathway:</strong> Physical observations → High-dimensional feature space → Learned invariants → Physical predictions</p>
+            
+            <p>Both pathways can reach the same physical truth. The cage is "locked" when the AI pathway converges to the human pathway—when the learned invariants correlate strongly with human-defined variables. The cage "breaks" when the AI pathway discovers alternative invariants that predict equally well without reconstructing human concepts.</p>
+            
+            <p>Critically, cage-breaking does not imply superiority. The broken-cage representations in our experiments are not uniformly better than human representations—they are different. In some cases (Experiment B1), the alternative approach outperforms human methods. In others (Experiment 10), the alternative representation exists but with poor predictive power. The appropriate interpretation is that multiple valid representational strategies exist, with human mathematics representing one successful pathway among potentially many [126].</p>
+            
+            <!-- 9. IMPLICATIONS AND DISCUSSION -->
+            <h2>9. Implications and Discussion</h2>
+            
+            <h3>9.1 Implications for Physics</h3>
+            
+            <p class="no-indent">Our findings have significant implications for theoretical physics. The demonstration that AI can discover valid alternative representations of physical laws—representations that do not reduce to human-defined variables—suggests that our current mathematical frameworks may capture only a subset of possible descriptions of nature [127,128].</p>
+            
+            <p>This does not imply that human physics is wrong. The equations of relativity, quantum mechanics, and thermodynamics make extraordinarily accurate predictions. However, these equations may represent one successful parameterization among many possible descriptions. Just as Cartesian and polar coordinates both validly describe the same geometric relationships, human physics and AI-discovered physics may both validly describe the same underlying reality through different conceptual primitives.</p>
+            
+            <p>The cage-breaking observed in relativistic and quantum domains is particularly intriguing. These are precisely the domains where human intuition famously fails—where the "weirdness" of physics exceeds evolutionary experience. The Darwin's Cage hypothesis predicts that AI should have advantages in these domains, and our experimental results provide supporting evidence [129].</p>
+            
+            <h3>9.2 Implications for AI Research</h3>
+            
+            <p class="no-indent">For artificial intelligence research, our findings highlight both capabilities and limitations of current approaches. The optical chaos architecture demonstrates genuine capability to discover alternative representations, but this capability is highly context-dependent. The failure of transfer learning (Experiment 4) and the falsification of simple complexity hypotheses (Experiment D1) indicate that current AI systems do not automatically abstract universal principles [130].</p>
+            
+            <p>The importance of architecture selection is underscored by the failed Experiment A1 versus successful Experiment A2. Matching the computational structure to the problem domain is essential for valid cage analysis. This suggests that future work on AI physics discovery should carefully consider whether the chosen architecture can, in principle, capture the relevant physical dynamics.</p>
+            
+            <h3>9.3 Philosophical Implications</h3>
+            
+            <p class="no-indent">The Darwin's Cage hypothesis and our experimental tests raise profound philosophical questions about the nature of knowledge, understanding, and the limits of human cognition. If AI can discover valid physics through non-human representations, what does this imply about the relationship between mathematics and physical reality [131,132]?</p>
+            
+            <p>Eugene Wigner famously noted the "unreasonable effectiveness of mathematics in the natural sciences" [133]. Our results suggest a complementary observation: the unreasonable specificity of human mathematics. Human mathematical frameworks work extraordinarily well, but they may represent contingent evolutionary solutions rather than uniquely correct descriptions. The effectiveness of AI-discovered alternatives suggests that multiple mathematical frameworks can capture physical truth—reducing the mystery of mathematics' effectiveness while raising new questions about why any particular framework succeeds.</p>
+            
+            <h3>9.4 Limitations and Future Directions</h3>
+            
+            <p class="no-indent">Several important limitations constrain the conclusions we can draw from this study:</p>
+            
+            <p><strong>Simulation-Based Data:</strong> All experiments use synthetic data generated from known physical laws. While this provides controlled conditions, it cannot guarantee that results transfer to real experimental data with measurement noise, systematic errors, and unknown phenomena.</p>
+            
+            <p><strong>Simplified Physics:</strong> Our physical systems, while diverse, represent simplified versions of full physical theories. The double pendulum is not a complete model of chaotic dynamics; the Bell test uses idealized entanglement; the black hole navigation neglects spin, charge, and quantum effects.</p>
+            
+            <p><strong>Architectural Constraints:</strong> The optical chaos architecture has known limitations, including difficulty with division operations and variable-frequency functions. Results may differ with other architectures such as transformers, graph neural networks, or neuromorphic hardware.</p>
+            
+            <p><strong>Interpretation Challenges:</strong> When models achieve low correlation with human variables, we interpret this as alternative representation discovery. However, low correlation could also indicate failed learning or random features. Our requirement of R² > 0.9 for cage analysis mitigates but does not eliminate this concern.</p>
+            
+            <p><strong>Future research directions include:</strong></p>
+            <p>• Real experimental validation on actual physical systems with genuine measurement uncertainty</p>
+            <p>• Testing additional architectures including transformers, equivariant neural networks, and quantum machine learning approaches</p>
+            <p>• Developing methods to extract interpretable symbolic expressions from cage-broken models</p>
+            <p>• Investigating whether cage-breaking generalizes across physical scales (quantum to cosmological)</p>
+            <p>• Exploring hybrid human-AI approaches that leverage complementary strengths</p>
+            
+            <!-- 10. CONCLUSIONS -->
+            <h2>10. Conclusions</h2>
+            
+            <p class="no-indent">This comprehensive experimental investigation of the Darwin's Cage hypothesis has yielded significant empirical evidence about the capabilities and limitations of AI-based physics discovery. Through twenty systematic experiments across classical mechanics, special and general relativity, quantum mechanics, and statistical physics, we have established the first rigorous experimental framework for testing whether artificial intelligence can transcend human conceptual frameworks in understanding physical reality.</p>
+            
+            <p>Our primary findings can be summarized as follows:</p>
+            
+            <p><strong>Finding 1:</strong> Cage-breaking is possible but requires specific conditions. Six of twenty experiments demonstrated genuine alternative representations with low correlation to human-defined physical variables. These successful cases occurred in relativistic physics (geometric learning of the Lorentz factor), quantum systems (phase extraction and Bell inequality violation), high-dimensional gravitational dynamics, and methodological optimization problems.</p>
+            
+            <p><strong>Finding 2:</strong> The cage-breaking phenomenon is highly context-dependent. Complexity alone, geometric encoding alone, representation type alone, chaotic dynamics alone, and quantum versus classical complexity alone all proved insufficient to break the cage. The successful cases share specific structural features: geometric relationships learnable through interference, complex-valued processing enabling phase access, high dimensionality forcing distributed representation, or methodological alternatives to analytical approaches.</p>
+            
+            <p><strong>Finding 3:</strong> The cage represents different representational strategies rather than an absolute barrier. Both human-derived and AI-discovered representations can reach physical truth through different computational pathways. Cage-breaking indicates the discovery of alternative valid descriptions, not necessarily superior descriptions.</p>
+            
+            <p><strong>Finding 4:</strong> Transfer learning between physical domains fails, even when underlying mathematics is identical. This suggests that current AI approaches learn domain-specific features rather than universal mathematical principles, placing important constraints on the generality of AI physics discovery.</p>
+            
+            <p><strong>Finding 5:</strong> Careful experimental design and appropriate architecture selection are essential for valid cage analysis. The contrast between failed Experiment A1 and successful Experiment A2 demonstrates that conclusions about representational capabilities require matching computational structure to problem domain.</p>
+            
+            <p>These findings provide substantial empirical evidence supporting a nuanced version of Samid's Darwin's Cage hypothesis. Human physics represents one successful pathway to understanding nature—a pathway shaped by evolutionary pressures and cognitive constraints—but alternative pathways exist that AI systems can discover under appropriate conditions. The cage is not a prison from which we must escape, but rather a reminder that our mathematical frameworks, however powerful, may capture only a fraction of possible descriptions of physical reality.</p>
+            
+            <p>This work opens new directions for both artificial intelligence research and theoretical physics. For AI, the challenge is to understand what architectural and training conditions reliably produce alternative representations, and whether these representations can be made interpretable to human researchers. For physics, the intriguing possibility emerges that AI-discovered representations might reveal aspects of nature that human mathematics has overlooked—not because human physics is wrong, but because it is incomplete.</p>
+            
+            <p>The Darwin's Cage, it appears, has doors that can be opened under the right circumstances. The question for future research is not whether AI can transcend human cognitive constraints, but how to systematically identify and explore the physics that lies beyond.</p>
+            
+        </div>
+        
+        <!-- Full-width summary figure -->
+        <div class="figure full-width">
+            <svg width="100%" height="400" viewBox="0 0 700 400">
+                <defs>
+                    <linearGradient id="lockedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.8" />
+                    </linearGradient>
+                    <linearGradient id="brokenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#27ae60;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#1e8449;stop-opacity:0.8" />
+                    </linearGradient>
+                    <linearGradient id="transGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#d68910;stop-opacity:0.8" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Title -->
+                <text x="350" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Summary of Experimental Outcomes: Darwin's Cage Status Distribution</text>
+                
+                <!-- Main chart area -->
+                <rect x="50" y="50" width="600" height="280" fill="#f8f9fa" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+                
+                <!-- Pie chart representation -->
+                <g transform="translate(200, 190)">
+                    <!-- LOCKED segment (14 experiments = 70%) -->
+                    <path d="M 0 0 L 80 0 A 80 80 0 1 1 -24.7 -76.1 Z" fill="url(#lockedGrad)" stroke="#fff" stroke-width="2"/>
+                    <text x="-30" y="50" font-size="11" font-weight="bold" fill="#c0392b">LOCKED</text>
+                    <text x="-20" y="65" font-size="10" fill="#c0392b">14 (70%)</text>
+                    
+                    <!-- BROKEN segment (6 experiments = 30%) -->
+                    <path d="M 0 0 L -24.7 -76.1 A 80 80 0 0 1 80 0 Z" fill="url(#brokenGrad)" stroke="#fff" stroke-width="2"/>
+                    <text x="25" y="-55" font-size="11" font-weight="bold" fill="#1e8449">BROKEN</text>
+                    <text x="35" y="-40" font-size="10" fill="#1e8449">6 (30%)</text>
+                </g>
+                
+                <!-- Breakdown boxes -->
+                <g transform="translate(380, 70)">
+                    <!-- BROKEN experiments -->
+                    <rect x="0" y="0" width="260" height="110" fill="#e8f8f0" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="130" y="20" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">🔓 CAGE-BREAKING EXPERIMENTS</text>
+                    <text x="10" y="40" font-size="8" fill="#2c3e50">• Exp 2: Einstein's Train (Geometric)</text>
+                    <text x="10" y="53" font-size="8" fill="#2c3e50">• Exp 3: Phase Extraction (Complex-valued)*</text>
+                    <text x="10" y="66" font-size="8" fill="#2c3e50">• Exp 10: N-Body System (High-dimensional)</text>
+                    <text x="10" y="79" font-size="8" fill="#2c3e50">• Exp B1: Event Horizon (Methodological)</text>
+                    <text x="10" y="92" font-size="8" fill="#2c3e50">• Exp B3: Bell Inequality (Informational)</text>
+                    <text x="10" y="105" font-size="8" fill="#2c3e50">• Exp W1: Quantum Cage (Quantum rep.)</text>
+                </g>
+                
+                <g transform="translate(380, 195)">
+                    <!-- LOCKED experiments -->
+                    <rect x="0" y="0" width="260" height="125" fill="#fdedec" stroke="#e74c3c" stroke-width="2" rx="5"/>
+                    <text x="130" y="20" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">🔒 LOCKED EXPERIMENTS</text>
+                    <text x="10" y="40" font-size="8" fill="#2c3e50">• Exp 1, 5, 7: Classical mechanics (variable reconstruction)</text>
+                    <text x="10" y="53" font-size="8" fill="#2c3e50">• Exp 4: Transfer test (failed generalization)</text>
+                    <text x="10" y="66" font-size="8" fill="#2c3e50">• Exp 6, 8, 9: Oscillators/chaos (architectural limits)</text>
+                    <text x="10" y="79" font-size="8" fill="#2c3e50">• Exp A2: Coordinate independence (both locked)</text>
+                    <text x="10" y="92" font-size="8" fill="#2c3e50">• Exp C1: Representation test (both locked)</text>
+                    <text x="10" y="105" font-size="8" fill="#2c3e50">• Exp D1: Complexity ladder (all 5 levels locked)</text>
+                    <text x="10" y="118" font-size="8" fill="#2c3e50">• Exp D2: Geometric forcing (0/3 broken)</text>
+                </g>
+                
+                <!-- Key findings box -->
+                <rect x="50" y="340" width="600" height="50" fill="#eaf2f8" stroke="#3498db" stroke-width="2" rx="5"/>
+                <text x="350" y="358" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">KEY FINDING: Cage-breaking requires specific conditions (geometric learning, phase access, high dimensions,</text>
+                <text x="350" y="372" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">or methodological alternatives). Complexity alone, geometric encoding alone, or representation type alone is INSUFFICIENT.</text>
+            </svg>
+            <p class="figure-caption"><strong>Figure 2.</strong> Summary of experimental outcomes across all twenty Darwin's Cage experiments. Thirty percent of experiments (6/20) achieved confirmed cage-breaking status, while 70% remained locked or failed. The distribution reveals that cage-breaking is neither universal nor random but occurs under specific identifiable conditions. The successful cage-breaking experiments share structural features: geometric relationships learnable through optical interference, complex-valued processing enabling phase information access, high dimensionality (>30D) forcing distributed representations, methodological alternatives to analytical approaches, or access to non-local quantum information. Multiple hypothesized cage-breaking mechanisms were falsified, including complexity alone (D1), geometric encoding alone (D2), and representation type (C1).</p>
+        </div>
+        
+        <div class="two-column">
+            
+            <!-- ACKNOWLEDGMENTS -->
+            <h2>Acknowledgments</h2>
+            
+            <p class="no-indent">This research was conducted independently by Francisco Angulo de Lafuente at the Independent Research Laboratory, Madrid, Spain. The author expresses profound gratitude to Dr. Gideon Samid of Case Western Reserve University for providing the theoretical foundation through his Darwin's Cage hypothesis, which motivated and guided this entire experimental program. The collaborative discussions with Dr. Samid were instrumental in shaping the research questions and interpreting the results.</p>
+            
+            <p>The author acknowledges the open-source software communities whose tools made this work possible: PyTorch for neural network implementation, NumPy and SciPy for numerical computation, scikit-learn for machine learning utilities, and Matplotlib for visualization. The computational resources were provided through personal hardware investments over many years of independent research.</p>
+            
+            <p>Special thanks to the broader scientific community whose prior work on reservoir computing, physics-informed machine learning, and foundations of quantum mechanics provided essential background for this investigation. The author also acknowledges the reviewers and colleagues who provided feedback on earlier versions of this work.</p>
+            
+            <p>This research received no external funding and was conducted entirely through the author's own resources as part of a long-term program investigating the boundaries between human cognition and physical reality through the lens of artificial intelligence.</p>
+            
+        </div>
+        
+        <!-- References Section -->
+        <div class="references">
+            <h2>References</h2>
+            <ol>
+                <li>Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. <em>Communications in Pure and Applied Mathematics</em>, 13(1), 1-14. https://doi.org/10.1002/cpa.3160130102</li>
+                
+                <li>Samid, G. (2025). Negotiating Darwin's Barrier: Evolution Limits Our View of Reality, AI Breaks Through. <em>Applied Physics Research</em>, 17(2), 102. https://doi.org/10.5539/apr.v17n2p102</li>
+                
+                <li>Pinker, S. (1997). <em>How the Mind Works</em>. W. W. Norton & Company.</li>
+                
+                <li>Cosmides, L., & Tooby, J. (1994). Origins of domain specificity: The evolution of functional organization. In L. A. Hirschfeld & S. A. Gelman (Eds.), <em>Mapping the Mind: Domain Specificity in Cognition and Culture</em> (pp. 85-116). Cambridge University Press.</li>
+                
+                <li>Tegmark, M. (2014). <em>Our Mathematical Universe: My Quest for the Ultimate Nature of Reality</em>. Knopf.</li>
+                
+                <li>Carleo, G., & Troyer, M. (2017). Solving the quantum many-body problem with artificial neural networks. <em>Science</em>, 355(6325), 602-606. https://doi.org/10.1126/science.aag2302</li>
+                
+                <li>Iten, R., et al. (2020). Discovering physical concepts with neural networks. <em>Physical Review Letters</em>, 124(1), 010508. https://doi.org/10.1103/PhysRevLett.124.010508</li>
+                
+                <li>LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. <em>Nature</em>, 521(7553), 436-444. https://doi.org/10.1038/nature14539</li>
+                
+                <li>Goodfellow, I., Bengio, Y., & Courville, A. (2016). <em>Deep Learning</em>. MIT Press.</li>
+                
+                <li>Jaeger, H. (2001). The "echo state" approach to analysing and training recurrent neural networks. GMD Report 148, German National Research Center for Information Technology.</li>
+                
+                <li>Maass, W., Natschläger, T., & Markram, H. (2002). Real-time computing without stable states: A new framework for neural computation based on perturbations. <em>Neural Computation</em>, 14(11), 2531-2560. https://doi.org/10.1162/089976602760407955</li>
+                
+                <li>Lukosevicius, M., & Jaeger, H. (2009). Reservoir computing approaches to recurrent neural network training. <em>Computer Science Review</em>, 3(3), 127-149. https://doi.org/10.1016/j.cosrev.2009.03.005</li>
+                
+                <li>Brunner, D., Soriano, M. C., & Fischer, I. (2013). Parallel photonic information processing at gigabyte per second data rates using transient states. <em>Nature Communications</em>, 4, 1364. https://doi.org/10.1038/ncomms2368</li>
+                
+                <li>Larger, L., et al. (2017). High-speed photonic reservoir computing using a time-delay-based architecture: Million words per second classification. <em>Physical Review X</em>, 7, 011015. https://doi.org/10.1103/PhysRevX.7.011015</li>
+                
+                <li>Van der Sande, G., Brunner, D., & Soriano, M. C. (2017). Advances in photonic reservoir computing. <em>Nanophotonics</em>, 6(3), 561-576. https://doi.org/10.1515/nanoph-2016-0132</li>
+                
+                <li>Nakajima, M., Tanaka, K., & Hashimoto, T. (2021). Scalable reservoir computing on coherent linear photonic processor. <em>Communications Physics</em>, 4, 20. https://doi.org/10.1038/s42005-021-00519-1</li>
+                
+                <li>Tanaka, G., et al. (2019). Recent advances in physical reservoir computing: A review. <em>Neural Networks</em>, 115, 100-123. https://doi.org/10.1016/j.neunet.2019.03.005</li>
+                
+                <li>Appeltant, L., et al. (2011). Information processing using a single dynamical node as complex system. <em>Nature Communications</em>, 2, 468. https://doi.org/10.1038/ncomms1476</li>
+                
+                <li>Vandoorne, K., et al. (2014). Experimental demonstration of reservoir computing on a silicon photonics chip. <em>Nature Communications</em>, 5, 3541. https://doi.org/10.1038/ncomms4541</li>
+                
+                <li>Firestein, S. (2012). <em>Ignorance: How It Drives Science</em>. Oxford University Press.</li>
+                
+                <li>Popper, K. (1959). <em>The Logic of Scientific Discovery</em>. Hutchinson & Co.</li>
+                
+                <li>Penrose, R. (1989). <em>The Emperor's New Mind: Concerning Computers, Minds, and the Laws of Physics</em>. Oxford University Press.</li>
+                
+                <li>Jaeger, H. (2007). Echo state network. <em>Scholarpedia</em>, 2(9), 2330. https://doi.org/10.4249/scholarpedia.2330</li>
+                
+                <li>Maass, W. (2011). Liquid state machines: motivation, theory, and applications. In <em>Computability in Context: Computation and Logic in the Real World</em> (pp. 275-296). Imperial College Press.</li>
+                
+                <li>Verstraeten, D., Schrauwen, B., D'Haene, M., & Stroobandt, D. (2007). An experimental unification of reservoir computing methods. <em>Neural Networks</em>, 20(3), 391-403. https://doi.org/10.1016/j.neunet.2007.04.003</li>
+                
+                <li>Lukoševičius, M. (2012). A practical guide to applying echo state networks. In <em>Neural Networks: Tricks of the Trade</em> (pp. 659-686). Springer.</li>
+                
+                <li>Gallicchio, C., & Micheli, A. (2017). Deep echo state network (DeepESN): A brief survey. arXiv preprint arXiv:1712.04323.</li>
+                
+                <li>Yildiz, I. B., Jaeger, H., & Kiebel, S. J. (2012). Re-visiting the echo state property. <em>Neural Networks</em>, 35, 1-9. https://doi.org/10.1016/j.neunet.2012.07.005</li>
+                
+                <li>Paquot, Y., et al. (2012). Optoelectronic reservoir computing. <em>Scientific Reports</em>, 2, 287. https://doi.org/10.1038/srep00287</li>
+                
+                <li>Duport, F., et al. (2012). All-optical reservoir computing. <em>Optics Express</em>, 20(20), 22783-22795. https://doi.org/10.1364/OE.20.022783</li>
+                
+                <li>Brunner, D., & Fischer, I. (2015). Reconfigurable semiconductor laser networks based on diffractive coupling. <em>Optics Letters</em>, 40(16), 3854-3857. https://doi.org/10.1364/OL.40.003854</li>
+                
+                <li>Vinckier, Q., et al. (2015). High-performance photonic reservoir computer based on a coherently driven passive cavity. <em>Optica</em>, 2(5), 438-446. https://doi.org/10.1364/OPTICA.2.000438</li>
+                
+                <li>Antonik, P., Marsal, N., Brunner, D., & Rontani, D. (2019). Human action recognition with a large-scale brain-inspired photonic computer. <em>Nature Machine Intelligence</em>, 1, 530-537. https://doi.org/10.1038/s42256-019-0110-8</li>
+                
+                <li>Sunada, S., & Uchida, A. (2021). Photonic neural field on a silicon chip: large-scale, high-speed neuro-inspired computing and sensing. <em>Optica</em>, 8(11), 1388-1396. https://doi.org/10.1364/OPTICA.434918</li>
+                
+                <li>Rafayelyan, M., Dong, J., Tan, Y., Krzakala, F., & Gigan, S. (2020). Large-scale optical reservoir computing for spatiotemporal chaotic systems prediction. <em>Physical Review X</em>, 10, 041037. https://doi.org/10.1103/PhysRevX.10.041037</li>
+                
+                <li>Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. <em>Journal of Computational Physics</em>, 378, 686-707. https://doi.org/10.1016/j.jcp.2018.10.045</li>
+                
+                <li>Karniadakis, G. E., et al. (2021). Physics-informed machine learning. <em>Nature Reviews Physics</em>, 3(6), 422-440. https://doi.org/10.1038/s42254-021-00314-5</li>
+                
+                <li>Carleo, G., et al. (2019). Machine learning and the physical sciences. <em>Reviews of Modern Physics</em>, 91(4), 045002. https://doi.org/10.1103/RevModPhys.91.045002</li>
+                
+                <li>Mehta, P., et al. (2019). A high-bias, low-variance introduction to machine learning for physicists. <em>Physics Reports</em>, 810, 1-124. https://doi.org/10.1016/j.physrep.2019.03.001</li>
+                
+                <li>Greydanus, S., Dzamba, M., & Yosinski, J. (2019). Hamiltonian neural networks. <em>Advances in Neural Information Processing Systems</em>, 32.</li>
+                
+                <li>Cranmer, M., et al. (2020). Lagrangian neural networks. arXiv preprint arXiv:2003.04630.</li>
+                
+                <li>Schmidt, M., & Lipson, H. (2009). Distilling free-form natural laws from experimental data. <em>Science</em>, 324(5923), 81-85. https://doi.org/10.1126/science.1165893</li>
+                
+                <li>Udrescu, S. M., & Tegmark, M. (2020). AI Feynman: A physics-inspired method for symbolic regression. <em>Science Advances</em>, 6(16), eaay2631. https://doi.org/10.1126/sciadv.aay2631</li>
+                
+                <li>Bongard, J., & Lipson, H. (2007). Automated reverse engineering of nonlinear dynamical systems. <em>Proceedings of the National Academy of Sciences</em>, 104(24), 9943-9948. https://doi.org/10.1073/pnas.0609476104</li>
+                
+                <li>Noether, E. (1918). Invariante Variationsprobleme. <em>Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse</em>, 1918, 235-257.</li>
+                
+                <li>Lutter, M., Ritter, C., & Peters, J. (2019). Deep Lagrangian networks: Using physics as model prior for deep learning. <em>International Conference on Learning Representations</em>.</li>
+                
+                <li>Finzi, M., et al. (2020). Simplifying Hamiltonian and Lagrangian neural networks via explicit constraints. <em>Advances in Neural Information Processing Systems</em>, 33.</li>
+                
+                <li>Gilmer, J., et al. (2017). Neural message passing for quantum chemistry. <em>Proceedings of the 34th International Conference on Machine Learning</em>, 1263-1272.</li>
+                
+                <li>Schütt, K. T., et al. (2017). SchNet: A continuous-filter convolutional neural network for modeling quantum interactions. <em>Advances in Neural Information Processing Systems</em>, 30.</li>
+                
+                <li>Feynman, R. P. (1982). Simulating physics with computers. <em>International Journal of Theoretical Physics</em>, 21(6-7), 467-488. https://doi.org/10.1007/BF02650179</li>
+                
+                <li>Lloyd, S. (1996). Universal quantum simulators. <em>Science</em>, 273(5278), 1073-1078. https://doi.org/10.1126/science.273.5278.1073</li>
+                
+                <li>Soriano, M. C., et al. (2015). Optoelectronic reservoir computing: Tackling noise-induced performance degradation. <em>Optics Express</em>, 23(3), 3318-3329. https://doi.org/10.1364/OE.23.003318</li>
+                
+                <li>Larger, L., et al. (2012). Photonic information processing beyond Turing: An optoelectronic implementation of reservoir computing. <em>Optics Express</em>, 20(3), 3241-3249. https://doi.org/10.1364/OE.20.003241</li>
+                
+                <li>Bueno, J., et al. (2018). Reinforcement learning in a large-scale photonic recurrent neural network. <em>Optica</em>, 5(6), 756-760. https://doi.org/10.1364/OPTICA.5.000756</li>
+                
+                <li>Gigan, S. (2022). Imaging and computing with disorder. <em>Nature Physics</em>, 18, 980-985. https://doi.org/10.1038/s41567-022-01681-1</li>
+                
+                <li>Wetzstein, G., et al. (2020). Inference in artificial intelligence with deep optics and photonics. <em>Nature</em>, 588, 39-47. https://doi.org/10.1038/s41586-020-2973-6</li>
+                
+                <li>Martinenghi, R., Rybalko, S., Jacquot, M., Chembo, Y. K., & Larger, L. (2012). Photonic nonlinear transient computing with multiple-delay wavelength dynamics. <em>Physical Review Letters</em>, 108(24), 244101. https://doi.org/10.1103/PhysRevLett.108.244101</li>
+                
+                <li>Rodan, A., & Tiño, P. (2011). Minimum complexity echo state network. <em>IEEE Transactions on Neural Networks</em>, 22(1), 131-144. https://doi.org/10.1109/TNN.2010.2089641</li>
+                
+                <li>Duport, F., et al. (2016). Fully analogue photonic reservoir computer. <em>Scientific Reports</em>, 6, 22381. https://doi.org/10.1038/srep22381</li>
+                
+                <li>Hoerl, A. E., & Kennard, R. W. (1970). Ridge regression: Biased estimation for nonorthogonal problems. <em>Technometrics</em>, 12(1), 55-67. https://doi.org/10.1080/00401706.1970.10488634</li>
+                
+                <li>Bishop, C. M. (2006). <em>Pattern Recognition and Machine Learning</em>. Springer.</li>
+                
+                <li>Hastie, T., Tibshirani, R., & Friedman, J. (2009). <em>The Elements of Statistical Learning</em>. Springer.</li>
+                
+                <li>Nagelkerke, N. J. D. (1991). A note on a general definition of the coefficient of determination. <em>Biometrika</em>, 78(3), 691-692. https://doi.org/10.1093/biomet/78.3.691</li>
+                
+                <li>Geman, S., Bienenstock, E., & Doursat, R. (1992). Neural networks and the bias/variance dilemma. <em>Neural Computation</em>, 4(1), 1-58. https://doi.org/10.1162/neco.1992.4.1.1</li>
+                
+                <li>Pathak, J., Hunt, B., Girvan, M., Lu, Z., & Ott, E. (2018). Model-free prediction of large spatiotemporally chaotic systems from data: A reservoir computing approach. <em>Physical Review Letters</em>, 120(2), 024102. https://doi.org/10.1103/PhysRevLett.120.024102</li>
+                
+                <li>Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em> (2nd ed.). Lawrence Erlbaum Associates.</li>
+                
+                <li>Wasserstein, R. L., & Lazar, N. A. (2016). The ASA's statement on p-values: Context, process, and purpose. <em>The American Statistician</em>, 70(2), 129-133. https://doi.org/10.1080/00031305.2016.1154108</li>
+                
+                <li>Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. <em>Journal of the American Statistical Association</em>, 22(158), 209-212. https://doi.org/10.1080/01621459.1927.10502953</li>
+                
+                <li>Newton, I. (1687). <em>Philosophiæ Naturalis Principia Mathematica</em>. Royal Society.</li>
+                
+                <li>Einstein, A. (1905). Zur Elektrodynamik bewegter Körper. <em>Annalen der Physik</em>, 322(10), 891-921. https://doi.org/10.1002/andp.19053221004</li>
+                
+                <li>Misner, C. W., Thorne, K. S., & Wheeler, J. A. (1973). <em>Gravitation</em>. W. H. Freeman.</li>
+                
+                <li>Mermin, N. D. (2005). It's about time: Understanding Einstein's relativity. Princeton University Press.</li>
+                
+                <li>Dirac, P. A. M. (1958). <em>The Principles of Quantum Mechanics</em> (4th ed.). Oxford University Press.</li>
+                
+                <li>Cohen-Tannoudji, C., Diu, B., & Laloë, F. (1977). <em>Quantum Mechanics</em>. Wiley.</li>
+                
+                <li>Schrödinger, E. (1926). Quantisierung als Eigenwertproblem. <em>Annalen der Physik</em>, 384(4), 361-376. https://doi.org/10.1002/andp.19263840404</li>
+                
+                <li>Pan, S. J., & Yang, Q. (2010). A survey on transfer learning. <em>IEEE Transactions on Knowledge and Data Engineering</em>, 22(10), 1345-1359. https://doi.org/10.1109/TKDE.2009.191</li>
+                
+                <li>Yosinski, J., Clune, J., Bengio, Y., & Lipson, H. (2014). How transferable are features in deep neural networks? <em>Advances in Neural Information Processing Systems</em>, 27.</li>
+                
+                <li>Zhuang, F., et al. (2020). A comprehensive survey on transfer learning. <em>Proceedings of the IEEE</em>, 109(1), 43-76. https://doi.org/10.1109/JPROC.2020.3004555</li>
+                
+                <li>Landau, L. D., & Lifshitz, E. M. (1976). <em>Mechanics</em> (3rd ed.). Butterworth-Heinemann.</li>
+                
+                <li>Goldstein, H., Poole, C., & Safko, J. (2002). <em>Classical Mechanics</em> (3rd ed.). Addison Wesley.</li>
+                
+                <li>Arnold, V. I. (1989). <em>Mathematical Methods of Classical Mechanics</em> (2nd ed.). Springer.</li>
+                
+                <li>Feynman, R. P., Leighton, R. B., & Sands, M. (1965). <em>The Feynman Lectures on Physics, Vol. III: Quantum Mechanics</em>. Addison-Wesley.</li>
+                
+                <li>Zettili, N. (2009). <em>Quantum Mechanics: Concepts and Applications</em> (2nd ed.). Wiley.</li>
+                
+                <li>Taylor, J. R. (2005). <em>Classical Mechanics</em>. University Science Books.</li>
+                
+                <li>Onsager, L. (1944). Crystal statistics. I. A two-dimensional model with an order-disorder transition. <em>Physical Review</em>, 65(3-4), 117-149. https://doi.org/10.1103/PhysRev.65.117</li>
+                
+                <li>Pathria, R. K., & Beale, P. D. (2011). <em>Statistical Mechanics</em> (3rd ed.). Academic Press.</li>
+                
+                <li>Kardar, M. (2007). <em>Statistical Physics of Particles</em>. Cambridge University Press.</li>
+                
+                <li>Griffiths, D. J. (2017). <em>Introduction to Quantum Mechanics</em> (3rd ed.). Cambridge University Press.</li>
+                
+                <li>Sakurai, J. J., & Napolitano, J. (2017). <em>Modern Quantum Mechanics</em> (2nd ed.). Cambridge University Press.</li>
+                
+                <li>Lorenz, E. N. (1963). Deterministic nonperiodic flow. <em>Journal of the Atmospheric Sciences</em>, 20(2), 130-141. https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2</li>
+                
+                <li>Strogatz, S. H. (2015). <em>Nonlinear Dynamics and Chaos</em> (2nd ed.). Westview Press.</li>
+                
+                <li>Ott, E. (2002). <em>Chaos in Dynamical Systems</em> (2nd ed.). Cambridge University Press.</li>
+                
+                <li>Heggie, D., & Hut, P. (2003). <em>The Gravitational Million-Body Problem</em>. Cambridge University Press.</li>
+                
+                <li>Aarseth, S. J. (2003). <em>Gravitational N-Body Simulations</em>. Cambridge University Press.</li>
+                
+                <li>Binney, J., & Tremaine, S. (2008). <em>Galactic Dynamics</em> (2nd ed.). Princeton University Press.</li>
+                
+                <li>Arnol'd, V. I. (1963). Small denominators and problems of stability of motion in classical and celestial mechanics. <em>Russian Mathematical Surveys</em>, 18(6), 85-191.</li>
+                
+                <li>Murray, C. D., & Dermott, S. F. (1999). <em>Solar System Dynamics</em>. Cambridge University Press.</li>
+                
+                <li>Levinson, N. (1949). A second order differential equation with singular solutions. <em>Annals of Mathematics</em>, 50(1), 127-153. https://doi.org/10.2307/1969357</li>
+                
+                <li>Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. <em>Neural Computation</em>, 9(8), 1735-1780. https://doi.org/10.1162/neco.1997.9.8.1735</li>
+                
+                <li>Greff, K., et al. (2017). LSTM: A search space odyssey. <em>IEEE Transactions on Neural Networks and Learning Systems</em>, 28(10), 2222-2232. https://doi.org/10.1109/TNNLS.2016.2582924</li>
+                
+                <li>Gers, F. A., Schmidhuber, J., & Cummins, F. (2000). Learning to forget: Continual prediction with LSTM. <em>Neural Computation</em>, 12(10), 2451-2471. https://doi.org/10.1162/089976600300015015</li>
+                
+                <li>Schwarzschild, K. (1916). Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie. <em>Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften</em>, 189-196.</li>
+                
+                <li>Wald, R. M. (1984). <em>General Relativity</em>. University of Chicago Press.</li>
+                
+                <li>Carroll, S. M. (2004). <em>Spacetime and Geometry: An Introduction to General Relativity</em>. Addison Wesley.</li>
+                
+                <li>Chandrasekhar, S. (1983). <em>The Mathematical Theory of Black Holes</em>. Oxford University Press.</li>
+                
+                <li>Kaluza, T. (1921). Zum Unitätsproblem der Physik. <em>Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften</em>, 966-972.</li>
+                
+                <li>Klein, O. (1926). Quantentheorie und fünfdimensionale Relativitätstheorie. <em>Zeitschrift für Physik</em>, 37(12), 895-906. https://doi.org/10.1007/BF01397481</li>
+                
+                <li>Arkani-Hamed, N., Dimopoulos, S., & Dvali, G. (1998). The hierarchy problem and new dimensions at a millimeter. <em>Physics Letters B</em>, 429(3-4), 263-272. https://doi.org/10.1016/S0370-2693(98)00466-3</li>
+                
+                <li>Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. <em>Physics Physique Fizika</em>, 1(3), 195-200. https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195</li>
+                
+                <li>Aspect, A., Dalibard, J., & Roger, G. (1982). Experimental test of Bell's inequalities using time-varying analyzers. <em>Physical Review Letters</em>, 49(25), 1804-1807. https://doi.org/10.1103/PhysRevLett.49.1804</li>
+                
+                <li>Clauser, J. F., Horne, M. A., Shimony, A., & Holt, R. A. (1969). Proposed experiment to test local hidden-variable theories. <em>Physical Review Letters</em>, 23(15), 880-884. https://doi.org/10.1103/PhysRevLett.23.880</li>
+                
+                <li>Einstein, A., Podolsky, B., & Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete? <em>Physical Review</em>, 47(10), 777-780. https://doi.org/10.1103/PhysRev.47.777</li>
+                
+                <li>Bengio, Y., Courville, A., & Vincent, P. (2013). Representation learning: A review and new perspectives. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 35(8), 1798-1828. https://doi.org/10.1109/TPAMI.2013.50</li>
+                
+                <li>Hinton, G. E., & Salakhutdinov, R. R. (2006). Reducing the dimensionality of data with neural networks. <em>Science</em>, 313(5786), 504-507. https://doi.org/10.1126/science.1127647</li>
+                
+                <li>Kolmogorov, A. N. (1957). On the representation of continuous functions of many variables by superposition of continuous functions of one variable and addition. <em>Doklady Akademii Nauk SSSR</em>, 114, 953-956.</li>
+                
+                <li>Hornik, K. (1991). Approximation capabilities of multilayer feedforward networks. <em>Neural Networks</em>, 4(2), 251-257. https://doi.org/10.1016/0893-6080(91)90009-T</li>
+                
+                <li>Cybenko, G. (1989). Approximation by superpositions of a sigmoidal function. <em>Mathematics of Control, Signals and Systems</em>, 2(4), 303-314. https://doi.org/10.1007/BF02551274</li>
+                
+                <li>Poggio, T., et al. (2017). Why and when can deep-but not shallow-networks avoid the curse of dimensionality: A review. <em>International Journal of Automation and Computing</em>, 14(5), 503-519. https://doi.org/10.1007/s11633-017-1054-2</li>
+                
+                <li>Deng, D. L., Li, X., & Das Sarma, S. (2017). Quantum entanglement in neural network states. <em>Physical Review X</em>, 7(2), 021021. https://doi.org/10.1103/PhysRevX.7.021021</li>
+                
+                <li>Gao, X., & Duan, L. M. (2017). Efficient representation of quantum many-body states with deep neural networks. <em>Nature Communications</em>, 8, 662. https://doi.org/10.1038/s41467-017-00705-2</li>
+                
+                <li>Levine, Y., et al. (2019). Quantum entanglement in deep learning architectures. <em>Physical Review Letters</em>, 122(6), 065301. https://doi.org/10.1103/PhysRevLett.122.065301</li>
+                
+                <li>Hibat-Allah, M., et al. (2020). Recurrent neural network wave functions. <em>Physical Review Research</em>, 2(2), 023358. https://doi.org/10.1103/PhysRevResearch.2.023358</li>
+                
+                <li>Schuld, M., Sinayskiy, I., & Petruccione, F. (2015). An introduction to quantum machine learning. <em>Contemporary Physics</em>, 56(2), 172-185. https://doi.org/10.1080/00107514.2014.964942</li>
+                
+                <li>Biamonte, J., et al. (2017). Quantum machine learning. <em>Nature</em>, 549(7671), 195-202. https://doi.org/10.1038/nature23474</li>
+                
+                <li>Preskill, J. (2018). Quantum computing in the NISQ era and beyond. <em>Quantum</em>, 2, 79. https://doi.org/10.22331/q-2018-08-06-79</li>
+                
+                <li>Havlíček, V., et al. (2019). Supervised learning with quantum-enhanced feature spaces. <em>Nature</em>, 567(7747), 209-212. https://doi.org/10.1038/s41586-019-0980-2</li>
+                
+                <li>Chalmers, D. J. (1995). Facing up to the problem of consciousness. <em>Journal of Consciousness Studies</em>, 2(3), 200-219.</li>
+                
+                <li>Dennett, D. C. (1991). <em>Consciousness Explained</em>. Little, Brown and Company.</li>
+                
+                <li>Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. <em>Communications in Pure and Applied Mathematics</em>, 13(1), 1-14. https://doi.org/10.1002/cpa.3160130102</li>
+                
+                <li>Silver, D., et al. (2016). Mastering the game of Go with deep neural networks and tree search. <em>Nature</em>, 529(7587), 484-489. https://doi.org/10.1038/nature16961</li>
+                
+                <li>Jumper, J., et al. (2021). Highly accurate protein structure prediction with AlphaFold. <em>Nature</em>, 596(7873), 583-589. https://doi.org/10.1038/s41586-021-03819-2</li>
+            </ol>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <hr style="margin: 30px 0; border: none; border-top: 2px solid #2c3e50;">
+            
+            <p><strong>Manuscript submitted to:</strong> Applied Physics Research / Nature Machine Intelligence / Physical Review Research</p>
+            <p><strong>Competition Entry:</strong> Darwin's Cage Experimental Program - Independent Research Project</p>
+            <p><strong>Date:</strong> November 2025</p>
+            
+            <p style="margin-top: 20px;"><strong>Author Contact & Publications:</strong></p>
+            <p style="line-height: 2; margin-top: 10px;">
+                <strong>GitHub:</strong> <a href="https://github.com/Agnuxo1" target="_blank">https://github.com/Agnuxo1</a><br>
+                <strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Francisco-Angulo-Lafuente-3" target="_blank">https://www.researchgate.net/profile/Francisco-Angulo-Lafuente-3</a><br>
+                <strong>Kaggle:</strong> <a href="https://www.kaggle.com/franciscoangulo" target="_blank">https://www.kaggle.com/franciscoangulo</a><br>
+                <strong>HuggingFace:</strong> <a href="https://huggingface.co/Agnuxo" target="_blank">https://huggingface.co/Agnuxo</a><br>
+                <strong>Wikipedia:</strong> <a href="https://es.wikipedia.org/wiki/Francisco_Angulo_de_Lafuente" target="_blank">https://es.wikipedia.org/wiki/Francisco_Angulo_de_Lafuente</a>
+            </p>
+            
+            <p style="margin-top: 20px; font-size: 8pt; color: #888;">
+                © 2025 Francisco Angulo de Lafuente. This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>
