@@ -861,10 +861,6 @@ but the courage to accept truths that exceed our comprehension."</em>
 
 ---
 
-**Contact & Further Reading:**
-- GitHub: [@Agnuxo](https://github.com/Agnuxo)
-- ResearchGate: [Francisco Angulo de Lafuente](https://www.researchgate.net/profile/Francisco-Angulo-De-Lafuente)
-- Hugging Face: [Agnuxo](https://huggingface.co/Agnuxo)
 
 **Acknowledgments:**  
 Special thanks to Dr. Gideon Samid (University of Maryland) for theoretical collaboration on the Darwin's Cage framework, and to the broader AI research community whose open-source contributions made this investigation possible.
