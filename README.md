@@ -21,6 +21,8 @@
 - **Responsibilities**: Experimental design, AI model creation, architecture development, results analysis, and report writing
 
 ---
+![Imagen1](https://github.com/user-attachments/assets/38c3aa73-4053-486b-813d-4c574231d394)
+
 
 ## Experimental Summary: Cage Status Across All Experiments
 
@@ -68,6 +70,9 @@ The most significant finding is that cage-breaking requires a combination of fac
 **Keywords:** Darwin's Cage, AI Physics Discovery, Computational Intelligence, Representation Learning, Quantum Machine Learning, Geometric Learning, Coordinate Independence
 
 ---
+
+![Imagen2](https://github.com/user-attachments/assets/0fd07b21-ad8e-4322-a1a7-a19836d88f63)
+
 
 ## 1. Introduction
 
@@ -117,6 +122,9 @@ This work makes several key contributions:
 
 ---
 
+![Imagen3](https://github.com/user-attachments/assets/4f66cee8-71c4-4e82-83b2-031c90d0f355)
+
+
 ## 2. Theoretical Framework
 
 ### 2.1 Mathematical Foundations
@@ -157,6 +165,9 @@ where $h_i$ are human variables and $f_j$ are model internal features. The cage 
 - **TRANSITION**: $0.5 \leq \text{max\_corr} < 0.7$ (intermediate state)
 - **BROKEN**: $\text{max\_corr} < 0.5$ (model discovers alternative representations)
 
+![Imagen4](https://github.com/user-attachments/assets/863b1182-7f95-4b96-91d3-6f47d3a7820e)
+
+
 ### 2.3 Optical Chaos Architecture
 
 The primary AI architecture used in this study is the Optical Chaos Machine, inspired by reservoir computing and optical interference:
@@ -176,6 +187,9 @@ The primary AI architecture used in this study is the Optical Chaos Machine, ins
 This architecture is designed to discover patterns through high-dimensional interference rather than explicit feature engineering.
 
 ---
+
+![Imagen5](https://github.com/user-attachments/assets/a235d3c6-7400-4a81-be0c-a0721df3efb4)
+
 
 ## 3. Experimental Methodology
 
@@ -222,6 +236,9 @@ All experiments use:
 - Effect size calculations (Cohen's d)
 
 ---
+
+![Imagen6](https://github.com/user-attachments/assets/cd8e7312-ecf0-42c1-81b9-a34bbb1fd583)
+
 
 ## 4. Phase I: Initial Exploratory Experiments (1-10)
 
@@ -305,6 +322,9 @@ All experiments use:
 <img width="2250" height="1500" alt="experiment_5_conservation" src="https://github.com/user-attachments/assets/9dd3705e-a943-4c98-af0d-5e1a20991fd6" />
 <img width="1800" height="1200" alt="benchmark_5_results" src="https://github.com/user-attachments/assets/0a34e43a-daef-49cc-99f2-e1186fe36d66" />
 
+![Imagen7](https://github.com/user-attachments/assets/772f86fe-b996-4522-93fd-ae186b1e7ff9)
+
+
 ### 4.6 Experiment 6: Quantum Interference (Double Slit)
 
 **Objective**: Test if models can learn quantum interference patterns without wave function concepts.
@@ -358,6 +378,9 @@ All experiments use:
 **Interpretation**: Both systems locked. Chaos alone does not break the cage when models fail to learn the dynamics.
 <img width="2084" height="1482" alt="experiment_9_linear_vs_chaos" src="https://github.com/user-attachments/assets/a496ba20-7e5e-45f4-9ad4-0ecafe4cdd10" />
 
+![Imagen8](https://github.com/user-attachments/assets/66ab9b16-b1a9-4dd1-9dd0-472ed470af03)
+
+
 ### 4.10 Experiment 10: Low vs High Dimensionality
 
 **Objective**: Test the dimensionality hypothesis: high-dimensional systems should break the cage.
@@ -373,6 +396,9 @@ All experiments use:
 <img width="2084" height="1480" alt="experiment_10_low_vs_high_dim" src="https://github.com/user-attachments/assets/37ba62d7-2b8c-4839-bfe7-433b92f1d195" />
 
 ---
+
+![Imagen9](https://github.com/user-attachments/assets/ccd5046a-a785-4136-b4e5-5400a9f4adc5)
+
 
 ## 5. Phase II: Coordinate Independence Tests (A1-A2)
 
@@ -408,6 +434,9 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 <img width="2100" height="1500" alt="experiment_A2_results" src="https://github.com/user-attachments/assets/d009f80f-51c9-4b39-96f5-1e6c3723ab43" />
 
 ---
+
+![Imagen10](https://github.com/user-attachments/assets/f67bc36e-bc59-4bbf-8faa-50cab8a64b86)
+
 
 ## 6. Phase III: Specialized Cage-Breaking Tests (B1-B3)
 
@@ -446,6 +475,9 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 
 **Interpretation**: The AI correctly identified that a 4D model provides better explanation than 3D spontaneous generation, demonstrating dimensional hypothesis generation.
 
+![Imagen11](https://github.com/user-attachments/assets/5272d5e3-8483-414f-9bf1-7d00fbcc90ab)
+
+
 ### 6.3 Experiment B3: The Non-Local Link (Informational Break)
 
 **Objective**: Test if AI can exceed Bell's Inequality limits for entangled particles.
@@ -463,6 +495,9 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 <img width="1000" height="600" alt="bell_correlation_plot" src="https://github.com/user-attachments/assets/36ef06c6-368c-475e-9d03-2b399443f3d2" />
 
 ---
+
+![Imagen12](https://github.com/user-attachments/assets/59cce371-0f9a-4166-a983-e97a87627a78)
+
 
 ## 7. Phase IV: Systematic Boundary Mapping (C1, D1-D2, W1)
 
@@ -493,6 +528,9 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 3. Restricted 3-Body (6D)
 4. Unrestricted 3-Body (18D)
 5. N-Body System (44D)
+
+![Imagen13](https://github.com/user-attachments/assets/929ae445-b1b7-4b44-a9ea-9f17ee24972e)
+
 
 **Hypothesis**: max_correlation should decrease monotonically with complexity.
 
@@ -536,6 +574,9 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 <img width="2250" height="600" alt="problem_2_Trajectory_Energy_Manifold" src="https://github.com/user-attachments/assets/bcb76eb0-0865-41a2-8d80-5ddc05e0dbe5" />
 <img width="2250" height="600" alt="problem_1_Spherical_Wave_Field" src="https://github.com/user-attachments/assets/077ca20a-3baa-4dc3-b4c9-7c20289a58dc" />
 
+![Imagen14](https://github.com/user-attachments/assets/7eb4d98c-a502-462d-bd14-98dd7ff3fbf2)
+
+
 ### 7.4 Experiment W1: Quantum Cage
 
 **Objective**: Test if neural networks can develop quantum representations independent of classical variables.
@@ -556,6 +597,10 @@ This demonstrates that multiple valid pathways to physical truth exist, supporti
 <img width="1200" height="1000" alt="cage_analysis" src="https://github.com/user-attachments/assets/e2d1effe-6709-4658-8cc4-c51fc411fd68" />
 
 ---
+
+![Imagen15](https://github.com/user-attachments/assets/91cc251a-4d75-42bc-b1ab-f7383156616a)
+
+
 
 ## 8. Synthesis and Unified Analysis
 
@@ -616,6 +661,9 @@ Critical insight: **Cage analysis is only meaningful when R² > 0.9**. Low-perfo
 
 ---
 
+![Imagen16](https://github.com/user-attachments/assets/4736bf27-b08f-4b10-bcd0-de20e80dedcd)
+
+
 ## 9. Limitations and Future Work
 
 ### 9.1 Current Limitations
@@ -646,6 +694,9 @@ Critical insight: **Cage analysis is only meaningful when R² > 0.9**. Low-perfo
 
 ---
 
+![Imagen17](https://github.com/user-attachments/assets/ff5b6da6-90ce-4191-9f0f-370acf3332d1)
+
+
 ## 10. Conclusions
 
 This comprehensive experimental investigation of the Darwin's Cage hypothesis has revealed a nuanced and complex picture. Through 20 systematic experiments across multiple physical domains, we have demonstrated that:
@@ -665,6 +716,9 @@ The study establishes the first systematic experimental framework for investigat
 The work contributes to both artificial intelligence and physics research by demonstrating that AI systems can indeed discover novel representational pathways to physical understanding, opening new possibilities for computational physics discovery while also highlighting the continued value of human-derived mathematical frameworks.
 
 ---
+
+![Imagen18](https://github.com/user-attachments/assets/32cceea5-1417-41e9-880f-9a3bb3e13453)
+
 
 ## Acknowledgments
 
