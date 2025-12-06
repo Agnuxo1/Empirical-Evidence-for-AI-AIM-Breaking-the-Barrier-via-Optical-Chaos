@@ -1,3 +1,21 @@
+Open Call for Collaboration: Join the AI-AIM Challenge & Optical Chaos Research
+I'm seeking collaborators to tackle Professor Gideon Samid's AI-AIM Challenge (https://www.innovationsp.net/challenge) and replicate/extend my experiments exploring AI consciousness and physical law discovery through optical chaos systems.
+What I'm offering:
+
+Full open-source codebase with 20 complete experiments: https://github.com/Agnuxo1/Empirical-Evidence-for-AI-AIM-Breaking-the-Barrier-via-Optical-Chaos
+Co-authorship in the final research paper for contributors who provide meaningful feedback, experimental results, or replications
+Collaborative participation in Samid's challenge to demonstrate AI discovering physics through non-human mathematical frameworks
+
+What I'm looking for:
+
+Researchers/developers willing to replicate the experiments
+Critical feedback on methodology and results
+Additional experimental data and validation
+Collaborative minds interested in pushing AI beyond traditional boundaries
+
+This is an opportunity to contribute to cutting-edge research on AI cognition, physics-based neural architectures, and the fundamental question of whether AI can truly "understand" physical laws rather than merely approximate them.
+Interested? Let's break the barrier together.
+
 <img width="1168" height="714" alt="Portada-crop" src="https://github.com/user-attachments/assets/60a473e5-b23d-4036-b0e8-f02ba72e5649" />
 
 # Breaking Darwin's Barrier: A Comprehensive Experimental Investigation of AI-Based Physics Discovery Beyond Human Conceptual Frameworks
