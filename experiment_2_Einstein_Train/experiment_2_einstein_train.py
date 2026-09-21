@@ -32,6 +32,8 @@ distortion of the wave, effectively "feeling" the time dilation
 as a phase shift.
 """
 
+import sys
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import Ridge
@@ -40,6 +42,10 @@ from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # --- 1. THE RELATIVISTIC SIMULATOR (The Truth) ---
 class RelativitySimulator:
@@ -254,3 +260,4 @@ def run_experiment_2():
 
 if __name__ == "__main__":
     run_experiment_2()
+

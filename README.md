@@ -1,20 +1,22 @@
-Open Call for Collaboration: Join the AI-AIM Challenge & Optical Chaos Research
-I'm seeking collaborators to tackle Professor Gideon Samid's AI-AIM Challenge (https://www.innovationsp.net/challenge) and replicate/extend my experiments exploring AI consciousness and physical law discovery through optical chaos systems.
-What I'm offering:
+# Breaking Darwin's Barrier: AI-Based Physics Discovery with Optical-Chaos-Inspired Reservoirs
 
-Full open-source codebase with 20 complete experiments: https://github.com/Agnuxo1/Empirical-Evidence-for-AI-AIM-Breaking-the-Barrier-via-Optical-Chaos
-Co-authorship in the final research paper for contributors who provide meaningful feedback, experimental results, or replications
-Collaborative participation in Samid's challenge to demonstrate AI discovering physics through non-human mathematical frameworks
+**Francisco Angulo de Lafuente** - independent exploratory research
 
-What I'm looking for:
+This repository contains a collection of synthetic experiments comparing
+polynomial baselines with fixed random-feature / optical-chaos-inspired
+reservoirs across classical, relativistic, quantum-inspired, and high-dimensional
+toy problems.
 
-Researchers/developers willing to replicate the experiments
-Critical feedback on methodology and results
-Additional experimental data and validation
-Collaborative minds interested in pushing AI beyond traditional boundaries
+> **Scientific status:** exploratory and not peer reviewed. The latest critical
+> report in this repository does **not** establish AI consciousness, discovery of
+> new physical laws, or a violation of Bell inequalities. Low correlation with a
+> human variable is not evidence of a new representation when the predictor has
+> failed to learn the target. See [FINAL_REPORT.md](FINAL_REPORT.md) and
+> [REPRODUCIBILITY.md](REPRODUCIBILITY.md) before interpreting any result.
 
-This is an opportunity to contribute to cutting-edge research on AI cognition, physics-based neural architectures, and the fundamental question of whether AI can truly "understand" physical laws rather than merely approximate them.
-Interested? Let's break the barrier together.
+Technical replication reports are welcome through GitHub Issues. Include the
+exact script, environment, random seeds, command, and generated outputs so that
+claims can be checked without relying on the summary language.
 
 <img width="1168" height="714" alt="Portada-crop" src="https://github.com/user-attachments/assets/60a473e5-b23d-4036-b0e8-f02ba72e5649" />
 
@@ -60,12 +62,12 @@ Interested? Let's break the barrier together.
 | **Exp A2** | Definitive Coordinate Independence | ⚪ **COORD-INDEP** | 0.9988 / 0.9968 | Both models coordinate-independent, different mechanisms |
 | **Exp B1** | The Event Horizon | 🔓 **BROKEN** | Success | Methodological break: variational optimization |
 | **Exp B2** | The Genesis (4D Universe) | 🔓 **BROKEN*** | Partial | Partial: dimensional hypothesis generated |
-| **Exp B3** | The Non-Local Link (Entanglement) | 🔓 **BROKEN** | 100% accuracy | Information break: exceeds Bell's Inequality |
+| **Exp B3** | The Non-Local Link (synthetic task) | 🔓 **BROKEN** | 100% synthetic accuracy | Does not test or violate Bell's inequality |
 | **Exp B1** | Symmetry Discovery | 🔒 **LOCKED** | High | High performance but locked cage |
 | **Exp C1** | Representation Test | 🔒 **LOCKED** | 0.9999 | Both representations locked, complex pattern |
 | **Exp D1** | Complexity Phase Transition | 🔒 **ALL LOCKED** | 0.01-0.98 | All 5 levels locked, complexity alone insufficient |
 | **Exp D2** | Geometric Forcing | 🔒/🟡 **LOCKED/TRANS** | 0.79-0.999 | 0/3 broken, geometric encoding insufficient |
-| **Exp W1** | Quantum Cage | 🔓 **BROKEN** | Excellent | Novel quantum representations, no classical correlation |
+| **Exp W1** | Quantum Cage | 🔓 **BROKEN** | Synthetic result | Representational result only; no independent quantum claim |
 
 **Legend:**
 - 🔒 **LOCKED**: Model reconstructs human variables (max_corr > 0.7)
@@ -81,11 +83,23 @@ Interested? Let's break the barrier together.
 
 This comprehensive study presents the results of 20 experimental investigations designed to test the "Darwin's Cage" hypothesis proposed by Gideon Samid: that artificial intelligence systems can discover physical laws independent of human conceptual frameworks. The hypothesis posits that human evolution has biased our mathematical thinking toward specific representations (Cartesian coordinates, velocity, energy) that may not be fundamental to physics itself. Through systematic experimentation across multiple physical domains—from classical mechanics to quantum entanglement, from low-dimensional systems to high-dimensional chaos—we evaluated whether AI models can transcend these human-imposed constraints and discover novel representational pathways to physical truth.
 
-Our experimental program employed three complementary approaches: (1) architectural comparison between polynomial regression (human-derived) and optical reservoir computing (chaos-based), (2) coordinate independence testing using non-linear transformations, and (3) specialized tests for methodological, dimensional, and informational cage-breaking. Results reveal a nuanced picture: while 6 of 20 experiments demonstrated genuine cage-breaking behavior, the phenomenon is highly context-dependent and requires specific conditions. Successful cage-breaking occurred in relativistic physics (geometric learning), quantum systems (phase extraction and entanglement), high-dimensional N-body systems, and methodological optimization problems. However, complexity alone, geometric encoding alone, or representation type alone proved insufficient to break the cage.
+Our experimental program employed three complementary approaches: (1) architectural comparison between polynomial regression (human-derived) and optical reservoir computing (chaos-based), (2) coordinate independence testing using non-linear transformations, and (3) specialized tests for methodological, dimensional, and informational cage-breaking. Results are mixed and do not establish the hypothesis. Some runs achieve high interpolation scores or low correlations with selected variables, but the critical review shows that low correlation can also arise from model failure or a weak diagnostic. The project therefore treats "cage-breaking" as an exploratory label requiring out-of-distribution tests, matched baselines, ablations, and independent replication.
 
-The most significant finding is that cage-breaking requires a combination of factors: either high dimensionality (>30 dimensions) with good performance, geometric relationships learnable via interference with strong extrapolation, or non-linear multiplicative relationships in specific domains. The study provides evidence that AI systems can indeed discover alternative pathways to physical understanding, but these pathways are not universally superior—they represent complementary strategies rather than replacements for human-derived mathematics. This work establishes the first systematic experimental framework for investigating AI-based physics discovery and provides critical insights into the conditions under which computational intelligence can transcend evolutionary cognitive constraints.
+The most defensible finding is methodological: high predictive performance and low feature correlation must be evaluated together, with held-out and transformed-domain tests. The current experiments provide useful failure cases and hypotheses for follow-up work, but they do not demonstrate that an AI system has discovered a superior physical representation or transcended human conceptual constraints.
 
 **Keywords:** Darwin's Cage, AI Physics Discovery, Computational Intelligence, Representation Learning, Quantum Machine Learning, Geometric Learning, Coordinate Independence
+
+## Current scientific status
+
+- The repository contains synthetic simulations and model comparisons; it does
+  not contain the MABe 2022 dataset or an independently reproduced MABe result.
+- The conservative interpretation is in [FINAL_REPORT.md](FINAL_REPORT.md): the
+  hypothesis remains unproven and several "broken" labels are compatible with
+  prediction failure.
+- The correlation thresholds are diagnostic heuristics, not a proof of a new
+  physical representation.
+- Claims about quantum mechanics, entanglement, Bell inequalities, or AI
+  consciousness must not be inferred from these toy experiments.
 
 ---
 
@@ -953,4 +967,5 @@ Special thanks to Dr. Gideon Samid (University of Maryland) for theoretical coll
 **HuggingFace:** https://huggingface.co/Agnuxo
 
 **Wikipedia:** https://es.wikipedia.org/wiki/Francisco_Angulo_de_Lafuente
+
 
