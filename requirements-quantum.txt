@@ -1,0 +1,4 @@
+# Optional dependency for experiment_W1_quantum_cage/.
+-r requirements.txt
+torch>=2.2
+
